@@ -1,0 +1,8 @@
+date,zone,type_alerte,niveau_danger,description,duree_heures
+2024-11-05,Mbour,Pollution,Moyen,Présence de déchets plastiques,48
+2024-11-09,Joal,Surpêche,Moyen,Zone de reproduction de Thiof,72
+2024-11-12,Saint-Louis,Piraterie,Faible,Activité suspecte signalée,24
+2024-11-14,Kayar,Pollution,Faible,Marée noire légère,12
+2024-11-16,Dakar,Surpêche,Élevé,Quota atteint pour Capitaine,96
+2024-11-18,Mbour,Piraterie,Moyen,Augmentation des incidents,48
+2024-11-20,Joal,Pollution,Élevé,Contamination bactérienne détectée,72
