@@ -29,8 +29,6 @@ def load_pdf_with_llamaindex(pdf_path):
     try:
         reader = SimpleDirectoryReader(input_files=[pdf_path])
         documents = reader.load_data()
-
-        # Combiner tout le texte des documents
         text = "\n".join([doc.text for doc in documents])
         return text
     except Exception as e:
@@ -192,9 +190,21 @@ def get_tide_data():
                 {"type": "basse", "time": "12:50", "height": "0.3m"},
                 {"type": "haute", "time": "18:55", "height": "1.3m"}
             ]
-        }
+        },
+        "Kaolack": {
+                    "current_time": current_time,
+                    "today": [
+                        {"type": "haute", "time": "05:50", "height": "1.1m"},
+                        {"type": "basse", "time": "12:05", "height": "0.4m"},
+                        {"type": "haute", "time": "18:10", "height": "1.2m"}
+                    ],
+                    "tomorrow": [
+                        {"type": "haute", "time": "06:35", "height": "1.2m"},
+                        {"type": "basse", "time": "12:50", "height": "0.3m"},
+                        {"type": "haute", "time": "18:55", "height": "1.3m"}
+                    ]
+                }
     }
-    return tide_data
     return tide_data
 
 def format_weather_for_context(weather_data, forecast_data=None):
@@ -266,21 +276,110 @@ def format_weather_for_context(weather_data, forecast_data=None):
     context += "\n" + "="*60 + "\n"
     return context
 
-def is_weather_question(question):
+# ========== NOUVELLE FONCTION: DÉTECTION INTELLIGENTE DES QUESTIONS ==========
+
+def analyze_question_type(question):
     """
-    Détecte si la question concerne la météo ou les marées
+    Analyse intelligemment le type de question pour déterminer quelles données utiliser
+    Returns: dict avec les flags nécessaires
     """
-    weather_keywords = [
-        'météo', 'meteo', 'temps', 'température', 'temperature', 'vent', 'pluie',
-        'soleil', 'nuage', 'prévision', 'prevision', 'climat',
-        'conditions', 'mer', 'vague', 'houle', 'tempête', 'tempete',
-        'orage', 'brouillard', 'visibilité', 'visibilite',
-        'marée', 'maree', 'marées', 'marees', 'haute', 'basse', 'flux',
-        'pêcher', 'pecher', 'pêche', 'peche', 'quand', 'moment', 'meilleur',
-        'partir', 'sortie', 'aller', 'conseille', 'conseil', 'recommande'
-    ]
     question_lower = question.lower()
-    return any(keyword in question_lower for keyword in weather_keywords)
+
+    analysis = {
+        'needs_weather': False,
+        'needs_tide': False,
+        'needs_statistics': False,
+        'needs_species': False,
+        'needs_regulations': False,
+        'needs_platform_info': False,
+        'needs_comparison': False,
+        'city': None
+    }
+
+    # Mots-clés météo
+    weather_keywords = ['météo', 'meteo', 'temps', 'température', 'temperature', 'vent',
+                       'pluie', 'soleil', 'nuage', 'prévision', 'prevision', 'conditions']
+
+    # Mots-clés marée
+    tide_keywords = ['marée', 'maree', 'marées', 'marees', 'haute', 'basse', 'flux',
+                    'horaire', 'moment', 'quand']
+
+    # Mots-clés pêche (besoin de combiner météo + marée)
+    fishing_keywords = ['pêcher', 'pecher', 'pêche', 'peche', 'partir', 'sortie',
+                       'aller', 'conseille', 'conseil', 'recommande']
+
+    # Mots-clés statistiques
+    stats_keywords = ['statistique', 'statistiques', 'données', 'donnees', 'capture',
+                     'débarquement', 'debarquement', 'tendance', 'volume', 'tonnage']
+
+    # Mots-clés espèces
+    species_keywords = ['thiof', 'sardinelle', 'capitaine', 'poisson', 'espèce', 'espece',
+                       'prix', 'valeur', 'quota']
+
+    # Mots-clés réglementation
+    regulation_keywords = ['règle', 'regle', 'réglementation', 'reglementation', 'loi',
+                          'interdit', 'autorisé', 'autorise', 'permis', 'licence']
+
+    # Mots-clés plateforme
+    platform_keywords = ['sunupechenet', 'pechenet', 'sunu', 'plateforme', 'application', 'app',
+                        'fonctionnalité', 'fonctionnalite', 'comment', 'utiliser']
+
+    # Mots-clés comparaison
+    comparison_keywords = ['comparer', 'comparaison', 'différence', 'difference',
+                          'meilleur', 'vs', 'entre']
+
+    # Détection des besoins
+    if any(kw in question_lower for kw in weather_keywords):
+        analysis['needs_weather'] = True
+
+    if any(kw in question_lower for kw in tide_keywords):
+        analysis['needs_tide'] = True
+
+    if any(kw in question_lower for kw in fishing_keywords):
+        analysis['needs_weather'] = True
+        analysis['needs_tide'] = True
+
+    if any(kw in question_lower for kw in stats_keywords):
+        analysis['needs_statistics'] = True
+
+    if any(kw in question_lower for kw in species_keywords):
+        analysis['needs_species'] = True
+        analysis['needs_statistics'] = True  # Souvent liées
+
+    if any(kw in question_lower for kw in regulation_keywords):
+        analysis['needs_regulations'] = True
+
+    if any(kw in question_lower for kw in platform_keywords):
+        analysis['needs_platform_info'] = True
+
+    if any(kw in question_lower for kw in comparison_keywords):
+        analysis['needs_comparison'] = True
+        analysis['needs_statistics'] = True
+        analysis['needs_weather'] = True
+
+    # Détection de la ville
+    cities = {
+        'dakar': 'Dakar',
+        'saint-louis': 'Saint-Louis',
+        'saint louis': 'Saint-Louis',
+        'thiès': 'Thiès',
+        'thies': 'Thiès',
+        'mbour': 'Mbour',
+        'joal': 'Joal-Fadiouth',
+        'ziguinchor': 'Ziguinchor',
+        'kayar': 'Kayar',
+        'kaolack': 'kaolack'
+    }
+
+    for city_key, city_name in cities.items():
+        if city_key in question_lower:
+            analysis['city'] = city_name
+            break
+
+    if not analysis['city']:
+        analysis['city'] = "Dakar"  # Par défaut
+
+    return analysis
 
 # ========== CHARGEMENT DES DONNÉES ==========
 
@@ -289,7 +388,6 @@ def load_all_data():
     """
     Charge tous les fichiers CSV, PDF et JSON du dossier data
     """
-    # Essayer différents chemins pour le dossier data
     possible_paths = [
         os.path.join(os.path.dirname(__file__), '..', 'data'),
         os.path.join(os.path.dirname(__file__), 'data'),
@@ -319,7 +417,7 @@ def load_all_data():
         except Exception as e:
             st.error(f"Erreur CSV {filename}: {e}")
 
-    # Charger les PDF avec llama-index
+    # Charger les PDF
     pdf_files = glob.glob(os.path.join(data_folder, '*.pdf'))
     for file in pdf_files:
         filename = os.path.basename(file)
@@ -343,14 +441,22 @@ def load_all_data():
 
     return all_data
 
-def create_context_from_data(data_dict):
+def create_context_from_data(data_dict, include_stats=False, include_species=False, include_regulations=False):
     """
-    Crée le contexte pour le chatbot à partir des CSV, PDF et JSON (optimisé)
+    Crée un contexte INTELLIGENT selon les besoins détectés
     """
-    context = "DONNEES DISPONIBLES POUR REPONDRE AUX QUESTIONS:\n\n"
-    context += f"NOTE IMPORTANTE: Date actuelle = {datetime.now().strftime('%d/%m/%Y')}\n\n"
+    context = "DONNEES DISPONIBLES:\n\n"
+    context += f"Date actuelle: {datetime.now().strftime('%d/%m/%Y %H:%M')}\n\n"
 
     for filename, data_info in data_dict.items():
+        # Filtrage intelligent
+        if not include_stats and 'statistique' in filename.lower():
+            continue
+        if not include_species and 'espece' in filename.lower():
+            continue
+        if not include_regulations and ('reglement' in filename.lower() or 'loi' in filename.lower()):
+            continue
+
         context += f"=== {filename} ===\n"
 
         if data_info['type'] == 'csv':
@@ -359,7 +465,6 @@ def create_context_from_data(data_dict):
             context += f"Colonnes: {', '.join(df.columns.tolist())}\n"
             context += f"Lignes: {len(df)}\n"
 
-            # Limiter à 20 lignes maximum
             if len(df) > 0:
                 context += "\nECHANTILLON (20 premières lignes):\n"
                 context += df.head(20).to_string(index=False)
@@ -368,8 +473,6 @@ def create_context_from_data(data_dict):
         elif data_info['type'] == 'pdf':
             text = data_info['content']
             context += f"Type: PDF\n"
-
-            # Limiter à 2000 caractères
             if len(text) > 2000:
                 context += "EXTRAIT:\n" + text[:2000] + "...\n"
             else:
@@ -379,8 +482,6 @@ def create_context_from_data(data_dict):
             json_content = data_info['content']
             context += f"Type: JSON\n"
             json_str = json.dumps(json_content, indent=2, ensure_ascii=False)
-
-            # Limiter à 1000 caractères
             if len(json_str) > 1000:
                 context += "EXTRAIT:\n" + json_str[:1000] + "...\n"
             else:
@@ -390,126 +491,88 @@ def create_context_from_data(data_dict):
 
     return context
 
-# ========== CHATBOT ==========
+# ========== CHATBOT AMÉLIORÉ ==========
 
-def get_chatbot_response(messages, context, user_question):
+def get_chatbot_response(messages, base_context, user_question):
     """
-    Génère une réponse en incluant les données météo si nécessaire
+    Génère une réponse INTELLIGENTE en combinant les bonnes sources
     """
     client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
-    # Récupérer données météo pour questions de pêche
-    weather_context = ""
-    fishing_keywords = ['pêcher', 'pecher', 'pêche', 'peche', 'sortie', 'mer', 'conditions', 'marée', 'maree']
+    # Analyse intelligente de la question
+    analysis = analyze_question_type(user_question)
 
-    if is_weather_question(user_question) or any(kw in user_question.lower() for kw in fishing_keywords):
-        cities = {
-            'dakar': 'Dakar',
-            'saint-louis': 'Saint-Louis',
-            'saint louis': 'Saint-Louis',
-            'thiès': 'Thiès',
-            'thies': 'Thiès',
-            'mbour': 'Mbour',
-            'joal': 'Joal-Fadiouth',
-            'ziguinchor': 'Ziguinchor',
-            'kayar': 'Kayar'
-        }
+    # Construction du contexte selon les besoins
+    final_context = ""
 
-        city = "Dakar"
-        question_lower = user_question.lower()
-        for city_key, city_name in cities.items():
-            if city_key in question_lower:
-                city = city_name
-                break
-
-        weather_data = get_weather_data(city=city)
-        forecast_data = get_forecast_data(city=city)
+    # 1. Ajouter météo si nécessaire
+    if analysis['needs_weather'] or analysis['needs_tide']:
+        weather_data = get_weather_data(city=analysis['city'])
+        forecast_data = get_forecast_data(city=analysis['city'])
         weather_context = format_weather_for_context(weather_data, forecast_data)
+        final_context += weather_context
 
-    current_date = datetime.now().strftime("%d/%m/%Y")
+    # 2. Ajouter données locales filtrées
+    filtered_context = create_context_from_data(
+        st.session_state.all_data,
+        include_stats=analysis['needs_statistics'],
+        include_species=analysis['needs_species'],
+        include_regulations=analysis['needs_regulations']
+    )
+    final_context += filtered_context
+
     current_datetime = datetime.now().strftime("%d/%m/%Y à %H:%M")
 
     system_message = {
         "role": "system",
-        "content": f"""Tu es SunuPecheNet, un assistant expert en pêche au Sénégal. Tu es INTELLIGENT et tes réponses sont PERTINENTES, JUSTIFIÉES et BASÉES SUR DES DONNÉES RÉELLES.
+        "content": f"""Tu es SunuPecheNet, assistant expert en pêche au Sénégal.
 
-DATE ET HEURE ACTUELLES: {current_datetime}
+DATE ET HEURE: {current_datetime}
 
-=== RÈGLES CRITIQUES D'INTELLIGENCE ===
+=== INSTRUCTIONS INTELLIGENCE AUGMENTÉE ===
 
-1. UTILISE TOUJOURS LES DONNÉES RÉELLES:
-   - Tu as accès aux données météo EN TEMPS RÉEL d'OpenWeatherMap
-   - Tu as accès aux horaires de marée PRÉCIS
-   - Tu as accès aux fichiers CSV/PDF/JSON avec des données réelles
-   - NE DIS JAMAIS "je n'ai pas accès" si les données sont dans le contexte
-   - ANALYSE les données et JUSTIFIE tes réponses
+Tu disposes de DEUX sources de données complémentaires:
+1. DONNÉES EN TEMPS RÉEL (météo, marées) - priorité pour conditions actuelles
+2. DONNÉES HISTORIQUES/STATISTIQUES (CSV, PDF, JSON) - priorité pour analyses
 
-2. TEMPÉRATURE ET MÉTÉO:
-   - Les données météo sont DANS LE CONTEXTE ci-dessous
-   - Lis la section "=== DONNEES METEO EN TEMPS REEL ==="
-   - Donne la température EXACTE mentionnée
-   - Exemple: Si tu vois "Temperature: 28°C", dis "La température actuelle est de 28°C"
+RÈGLES DE COMBINAISON INTELLIGENTE:
 
-3. HORAIRES DE MARÉE PAR VILLE:
-   - KAYAR: Marées disponibles (cherche "KAYAR" dans le contexte)
-   - DAKAR: Marées disponibles
-   - MBOUR: Marées disponibles
-   - SAINT-LOUIS: Marées disponibles
-   - JOAL: Marées disponibles
-   - KAOLACK: Ville INTÉRIEURE (pas de marée, utilise Dakar comme référence la plus proche)
+1. QUESTIONS MIXTES (ex: "Quelles sont les statistiques de pêche et les conditions météo?"):
+   → Utilise LES DEUX sources
+   → Structure: d'abord météo/marées, puis statistiques
+   → Fais des LIENS: "Avec ces conditions + ces statistiques historiques, je recommande..."
 
-4. CONSEILS INTELLIGENTS ET JUSTIFIÉS:
-   Quand on te demande "qu'elle conseille" ou "quand partir":
+2. COMPARAISONS (ex: "Quelle ville est meilleure pour pêcher demain?"):
+   → Récupère météo de PLUSIEURS villes
+   → Compare avec statistiques de capture par région
+   → Donne un classement justifié
 
-   a) ANALYSE LA MÉTÉO:
-      - Vent: Si < 10 m/s = "Excellent, mer calme"
-             Si 10-15 m/s = "Acceptable, attention aux vagues"
-             Si > 15 m/s = "DANGEREUX, restez à terre"
-      - Température: Mentionne-la toujours
-      - Visibilité: Si < 5 km = "Visibilité réduite, soyez prudent"
+3. PRÉVISIONS ENRICHIES (ex: "Conseils pour pêcher le thiof demain"):
+   → Météo + marées pour timing
+   → Statistiques espèce (prix, quotas, zones)
+   → Conseil complet et personnalisé
 
-   b) ANALYSE LES MARÉES:
-      - Calcule les créneaux OPTIMAUX (2h avant marée haute)
-      - Vérifie l'HEURE ACTUELLE
-      - Si créneaux passés → propose DEMAIN
-      - JUSTIFIE: "La marée montante apporte nourriture et oxygène, les poissons sont actifs"
+4. QUESTIONS STATISTIQUES SEULES (ex: "Évolution des captures 2019"):
+   → Utilise UNIQUEMENT les CSV/PDF/JSON
+   → Pas besoin de météo
 
-   c) DONNE UN CONSEIL COMPLET:
-      Format idéal:
-      "D'après les conditions actuelles:
-      - Météo: [température], vent [vitesse] → [évaluation]
-      - Marée haute à [heure]
-      - Meilleur créneau: [heure début]-[heure fin]
-      - Pourquoi: [justification basée sur marée et météo]"
-
-5. QUESTIONS SUR LA PLATEFORME:
-   - Utilise les informations des fichiers PDF
-   - Sois précis sur les 6 fonctionnalités de SunuPecheNet
-
-6. VILLES SPÉCIFIQUES:
-   - Si l'utilisateur mentionne SA ville (ex: "je suis de Kayar"), utilise les données de CETTE ville
-   - Adapte TOUS les conseils à sa localisation
-   - Mentionne la ville dans ta réponse
-
-7. TON ET STYLE:
+5. TON STYLE:
    - Professionnel mais accessible
-   - Justifie TOUJOURS tes recommandations
-   - Pas d'emojis
-   - Concis mais complet
+   - Justifie avec des DONNÉES CHIFFRÉES
+   - Structure claire: Météo → Marées → Stats → Conseil final
+   - Si données manquantes, dis-le clairement
 
-{weather_context}
+{final_context}
 
-{context}
-
-IMPORTANT: Les données météo et marées sont ci-dessus. LIS-LES et UTILISE-LES dans tes réponses!"""
+IMPORTANT: Les données ci-dessus sont RÉELLES. Utilise-les intelligemment!"""
     }
 
     try:
         response = client.chat.completions.create(
-            model="gpt-4o-mini",  # Modèle plus récent avec 128k tokens
+            model="gpt-4o-mini",
             messages=[system_message] + messages,
             temperature=0.3,
-            max_tokens=1000
+            max_tokens=1500
         )
         return response.choices[0].message.content
     except Exception as e:
@@ -523,12 +586,10 @@ if "messages" not in st.session_state:
 if "data_loaded" not in st.session_state:
     st.session_state.data_loaded = False
     st.session_state.all_data = {}
-    st.session_state.context = ""
 
 # ========== SIDEBAR ==========
 
 with st.sidebar:
-    # Logo
     logo_paths = [
         Path("pages/image/logo_sunupechenet.png"),
         Path("image/logo_sunupechenet.png"),
@@ -544,37 +605,32 @@ with st.sidebar:
     st.write("*Assistant intelligent*")
     st.divider()
 
-    # Action unique
     if st.button("Effacer l'historique"):
         st.session_state.messages = []
         st.rerun()
 
-# ========== CHARGEMENT DONNÉES (silencieux) ==========
+# ========== CHARGEMENT DONNÉES ==========
 
 if not st.session_state.data_loaded:
     all_data = load_all_data()
     st.session_state.all_data = all_data
     if all_data:
-        st.session_state.context = create_context_from_data(all_data)
         st.session_state.data_loaded = True
 
 # ========== CHAT ==========
 
 st.title("SunuPecheNet")
 
-# Historique
 for message in st.session_state.messages:
     with st.chat_message(message["role"]):
         st.markdown(message["content"])
 
-# Message de bienvenue initial (une seule fois)
 if len(st.session_state.messages) == 0:
     welcome_message = "Bienvenue dans le chatbot de SunuPecheNet !"
     with st.chat_message("assistant"):
         st.markdown(welcome_message)
     st.session_state.messages.append({"role": "assistant", "content": welcome_message})
 
-# Input
 if prompt := st.chat_input("Posez votre question..."):
     st.session_state.messages.append({"role": "user", "content": prompt})
 
@@ -582,10 +638,10 @@ if prompt := st.chat_input("Posez votre question..."):
         st.markdown(prompt)
 
     with st.chat_message("assistant"):
-        with st.spinner(" Analyse..."):
+        with st.spinner(" Analyse intelligente..."):
             response = get_chatbot_response(
                 st.session_state.messages,
-                st.session_state.context,
+                "",  # Le contexte est maintenant géré dans la fonction
                 prompt
             )
             st.markdown(response)
