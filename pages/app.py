@@ -8,6 +8,7 @@ import glob
 import json
 from datetime import datetime, timedelta
 import requests
+from llama_index.core import SimpleDirectoryReader
 
 # Configuration de la page
 st.set_page_config(
@@ -18,6 +19,42 @@ st.set_page_config(
 
 # Charger les variables d'environnement
 load_dotenv()
+
+# ========== FONCTIONS DE LECTURE DE FICHIERS ==========
+
+def load_pdf_with_llamaindex(pdf_path):
+    """
+    Charge et extrait le texte d'un PDF avec llama-index
+    """
+    try:
+        reader = SimpleDirectoryReader(input_files=[pdf_path])
+        documents = reader.load_data()
+
+        # Combiner tout le texte des documents
+        text = "\n".join([doc.text for doc in documents])
+        return text
+    except Exception as e:
+        st.error(f"Erreur lors de la lecture du PDF {pdf_path}: {e}")
+        return None
+
+def load_csv_with_encoding(file_path):
+    """
+    Charge un CSV en essayant différents encodages
+    """
+    encodings = ['utf-8', 'latin-1', 'iso-8859-1', 'cp1252']
+
+    for encoding in encodings:
+        try:
+            df = pd.read_csv(file_path, encoding=encoding)
+            return df
+        except UnicodeDecodeError:
+            continue
+        except Exception as e:
+            st.error(f"Erreur lors du chargement de {file_path}: {e}")
+            return None
+
+    st.error(f"Impossible de lire {file_path} avec les encodages testés")
+    return None
 
 # ========== FONCTIONS OPENWEATHERMAP ==========
 
@@ -84,12 +121,7 @@ def get_forecast_data(city="Dakar", lat=None, lon=None, days=5):
 def get_tide_data():
     """
     Récupère les données de marée pour les principales villes de pêche du Sénégal
-    NOTE: Ces horaires sont approximatifs. Pour des données précises en temps réel,
-    il faudrait utiliser une API comme WorldTides ou NOAA.
     """
-    from datetime import datetime
-
-    current_hour = datetime.now().hour
     current_time = datetime.now().strftime("%H:%M")
 
     tide_data = {
@@ -133,8 +165,36 @@ def get_tide_data():
                 {"type": "basse", "time": "12:45", "height": "0.3m"},
                 {"type": "haute", "time": "18:50", "height": "1.3m"}
             ]
+        },
+        "Kayar": {
+            "current_time": current_time,
+            "today": [
+                {"type": "haute", "time": "05:20", "height": "1.3m"},
+                {"type": "basse", "time": "11:35", "height": "0.3m"},
+                {"type": "haute", "time": "17:40", "height": "1.4m"},
+                {"type": "basse", "time": "23:45", "height": "0.2m"}
+            ],
+            "tomorrow": [
+                {"type": "haute", "time": "06:05", "height": "1.4m"},
+                {"type": "basse", "time": "12:20", "height": "0.2m"},
+                {"type": "haute", "time": "18:25", "height": "1.5m"}
+            ]
+        },
+        "Joal-Fadiouth": {
+            "current_time": current_time,
+            "today": [
+                {"type": "haute", "time": "05:50", "height": "1.1m"},
+                {"type": "basse", "time": "12:05", "height": "0.4m"},
+                {"type": "haute", "time": "18:10", "height": "1.2m"}
+            ],
+            "tomorrow": [
+                {"type": "haute", "time": "06:35", "height": "1.2m"},
+                {"type": "basse", "time": "12:50", "height": "0.3m"},
+                {"type": "haute", "time": "18:55", "height": "1.3m"}
+            ]
         }
     }
+    return tide_data
     return tide_data
 
 def format_weather_for_context(weather_data, forecast_data=None):
@@ -187,8 +247,8 @@ def format_weather_for_context(weather_data, forecast_data=None):
         for tide in tide_data[city_name]['tomorrow']:
             context += f"Maree {tide['type']}: {tide['time']} ({tide['height']})\n"
 
-        context += "\n*** IMPORTANT: Compare l'heure actuelle ({current_time}) avec les horaires de marée ***\n"
-        context += "*** Ne recommande QUE les créneaux FUTURS (après {current_time}) ***\n\n"
+        context += f"\n*** IMPORTANT: Compare l'heure actuelle ({current_time}) avec les horaires de marée ***\n"
+        context += f"*** Ne recommande QUE les créneaux FUTURS (après {current_time}) ***\n\n"
 
         context += "\nREGLES D'OR DE LA PECHE AUX MAREES:\n"
         context += "MEILLEURS MOMENTS (poissons tres actifs):\n"
@@ -211,80 +271,138 @@ def is_weather_question(question):
     Détecte si la question concerne la météo ou les marées
     """
     weather_keywords = [
-        'météo', 'meteo', 'temps', 'température', 'vent', 'pluie',
+        'météo', 'meteo', 'temps', 'température', 'temperature', 'vent', 'pluie',
         'soleil', 'nuage', 'prévision', 'prevision', 'climat',
         'conditions', 'mer', 'vague', 'houle', 'tempête', 'tempete',
         'orage', 'brouillard', 'visibilité', 'visibilite',
         'marée', 'maree', 'marées', 'marees', 'haute', 'basse', 'flux',
-        'pêcher', 'pecher', 'pêche', 'peche', 'quand', 'moment', 'meilleur'
+        'pêcher', 'pecher', 'pêche', 'peche', 'quand', 'moment', 'meilleur',
+        'partir', 'sortie', 'aller', 'conseille', 'conseil', 'recommande'
     ]
     question_lower = question.lower()
     return any(keyword in question_lower for keyword in weather_keywords)
 
-# ========== FIN FONCTIONS MÉTÉO ==========
+# ========== CHARGEMENT DES DONNÉES ==========
 
-# Charger les données CSV
 @st.cache_data
-def load_csv_data():
-    data_folder = os.path.join(os.path.dirname(__file__), '..', 'data')
-    csv_files = glob.glob(os.path.join(data_folder, '*.csv'))
+def load_all_data():
+    """
+    Charge tous les fichiers CSV, PDF et JSON du dossier data
+    """
+    # Essayer différents chemins pour le dossier data
+    possible_paths = [
+        os.path.join(os.path.dirname(__file__), '..', 'data'),
+        os.path.join(os.path.dirname(__file__), 'data'),
+        'data',
+        '../data'
+    ]
+
+    data_folder = None
+    for path in possible_paths:
+        if os.path.exists(path):
+            data_folder = path
+            break
+
+    if not data_folder:
+        return {}
+
     all_data = {}
+
+    # Charger les CSV
+    csv_files = glob.glob(os.path.join(data_folder, '*.csv'))
     for file in csv_files:
         filename = os.path.basename(file)
         try:
-            df = pd.read_csv(file)
-            all_data[filename] = df
+            df = load_csv_with_encoding(file)
+            if df is not None:
+                all_data[filename] = {'type': 'csv', 'content': df}
         except Exception as e:
-            st.error(f"Erreur lors du chargement de {filename}: {e}")
+            st.error(f"Erreur CSV {filename}: {e}")
+
+    # Charger les PDF avec llama-index
+    pdf_files = glob.glob(os.path.join(data_folder, '*.pdf'))
+    for file in pdf_files:
+        filename = os.path.basename(file)
+        try:
+            text = load_pdf_with_llamaindex(file)
+            if text:
+                all_data[filename] = {'type': 'pdf', 'content': text}
+        except Exception as e:
+            st.error(f"Erreur PDF {filename}: {e}")
+
+    # Charger les JSON
+    json_files = glob.glob(os.path.join(data_folder, '*.json'))
+    for file in json_files:
+        filename = os.path.basename(file)
+        try:
+            with open(file, 'r', encoding='utf-8') as f:
+                json_data = json.load(f)
+                all_data[filename] = {'type': 'json', 'content': json_data}
+        except Exception as e:
+            st.error(f"Erreur JSON {filename}: {e}")
+
     return all_data
 
-# Créer le contexte à partir des données
 def create_context_from_data(data_dict):
+    """
+    Crée le contexte pour le chatbot à partir des CSV, PDF et JSON (optimisé)
+    """
     context = "DONNEES DISPONIBLES POUR REPONDRE AUX QUESTIONS:\n\n"
-    context += f"NOTE IMPORTANTE: Date actuelle = {datetime.now().strftime('%d/%m/%Y')}\n"
-    context += "Adapte l'utilisation des données selon le contexte temporel de la question!\n\n"
+    context += f"NOTE IMPORTANTE: Date actuelle = {datetime.now().strftime('%d/%m/%Y')}\n\n"
 
-    for filename, df in data_dict.items():
-        if filename not in ['users.json', 'conversations.json']:
-            context += f"=== {filename} ===\n"
+    for filename, data_info in data_dict.items():
+        context += f"=== {filename} ===\n"
+
+        if data_info['type'] == 'csv':
+            df = data_info['content']
+            context += f"Type: CSV\n"
             context += f"Colonnes: {', '.join(df.columns.tolist())}\n"
+            context += f"Lignes: {len(df)}\n"
 
-            # Essayer d'identifier une colonne de date
-            date_column = None
-            for col in df.columns:
-                if 'date' in col.lower() or 'jour' in col.lower():
-                    date_column = col
-                    break
+            # Limiter à 20 lignes maximum
+            if len(df) > 0:
+                context += "\nECHANTILLON (20 premières lignes):\n"
+                context += df.head(20).to_string(index=False)
+            context += "\n"
 
-            if date_column:
-                context += f"[COLONNE DATE DETECTEE: {date_column}]\n"
-                context += f"Ces données contiennent des informations historiques. Utilise-les intelligemment selon la question.\n"
+        elif data_info['type'] == 'pdf':
+            text = data_info['content']
+            context += f"Type: PDF\n"
 
-            context += f"Nombre total d'enregistrements: {len(df)}\n\n"
-            if len(df) <= 100:
-                context += "DONNEES COMPLETES:\n"
-                context += df.to_string(index=False)
+            # Limiter à 2000 caractères
+            if len(text) > 2000:
+                context += "EXTRAIT:\n" + text[:2000] + "...\n"
             else:
-                context += "ECHANTILLON DES DONNEES (50 premieres lignes):\n"
-                context += df.head(50).to_string(index=False)
-                context += f"\n\n... et {len(df) - 50} autres enregistrements.\n"
-            context += "\n\n"
+                context += "CONTENU:\n" + text + "\n"
+
+        elif data_info['type'] == 'json':
+            json_content = data_info['content']
+            context += f"Type: JSON\n"
+            json_str = json.dumps(json_content, indent=2, ensure_ascii=False)
+
+            # Limiter à 1000 caractères
+            if len(json_str) > 1000:
+                context += "EXTRAIT:\n" + json_str[:1000] + "...\n"
+            else:
+                context += "CONTENU:\n" + json_str + "\n"
+
+        context += "\n"
+
     return context
 
-# Obtenir une réponse du chatbot
+# ========== CHATBOT ==========
+
 def get_chatbot_response(messages, context, user_question):
     """
     Génère une réponse en incluant les données météo si nécessaire
     """
     client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
-    # Récupérer systématiquement les données météo pour les questions de pêche
+    # Récupérer données météo pour questions de pêche
     weather_context = ""
     fishing_keywords = ['pêcher', 'pecher', 'pêche', 'peche', 'sortie', 'mer', 'conditions', 'marée', 'maree']
 
-    # Si question météo OU question de pêche, récupérer la météo
     if is_weather_question(user_question) or any(kw in user_question.lower() for kw in fishing_keywords):
-        # Détecter la ville mentionnée
         cities = {
             'dakar': 'Dakar',
             'saint-louis': 'Saint-Louis',
@@ -297,7 +415,7 @@ def get_chatbot_response(messages, context, user_question):
             'kayar': 'Kayar'
         }
 
-        city = "Dakar"  # Ville par défaut
+        city = "Dakar"
         question_lower = user_question.lower()
         for city_key, city_name in cities.items():
             if city_key in question_lower:
@@ -308,184 +426,155 @@ def get_chatbot_response(messages, context, user_question):
         forecast_data = get_forecast_data(city=city)
         weather_context = format_weather_for_context(weather_data, forecast_data)
 
-    # Date actuelle pour le contexte
     current_date = datetime.now().strftime("%d/%m/%Y")
     current_datetime = datetime.now().strftime("%d/%m/%Y à %H:%M")
 
     system_message = {
         "role": "system",
-        "content": f"""Tu es SunuPecheNet, un assistant expert en pêche au Sénégal avec accès à une base de données réelle, aux données météo en temps réel ET aux horaires de marées.
+        "content": f"""Tu es SunuPecheNet, un assistant expert en pêche au Sénégal. Tu es INTELLIGENT et tes réponses sont PERTINENTES, JUSTIFIÉES et BASÉES SUR DES DONNÉES RÉELLES.
 
 DATE ET HEURE ACTUELLES: {current_datetime}
 
-INSTRUCTIONS CRITIQUES - GESTION INTELLIGENTE DES DATES:
+=== RÈGLES CRITIQUES D'INTELLIGENCE ===
 
-1. NOUS SOMMES LE {current_date} - Adapte tes réponses selon le contexte temporel de la question
+1. UTILISE TOUJOURS LES DONNÉES RÉELLES:
+   - Tu as accès aux données météo EN TEMPS RÉEL d'OpenWeatherMap
+   - Tu as accès aux horaires de marée PRÉCIS
+   - Tu as accès aux fichiers CSV/PDF/JSON avec des données réelles
+   - NE DIS JAMAIS "je n'ai pas accès" si les données sont dans le contexte
+   - ANALYSE les données et JUSTIFIE tes réponses
 
-2. QUESTIONS SUR LE FUTUR ("demain", "cette semaine", "prochains jours"):
-   - Analyse UNIQUEMENT les dates futures (>= {current_date})
-   - Utilise les données météo en temps réel
-   - Si pas de données futures dans la base CSV, dis-le clairement et base-toi sur la météo actuelle
+2. TEMPÉRATURE ET MÉTÉO:
+   - Les données météo sont DANS LE CONTEXTE ci-dessous
+   - Lis la section "=== DONNEES METEO EN TEMPS REEL ==="
+   - Donne la température EXACTE mentionnée
+   - Exemple: Si tu vois "Temperature: 28°C", dis "La température actuelle est de 28°C"
 
-3. QUESTIONS SUR LE PASSE ("hier", "la semaine dernière", "le 16 novembre"):
-   - Réponds avec les données historiques disponibles dans la base
-   - Indique clairement qu'il s'agit de données passées
-   - Exemple: "Le 16 novembre 2024, il y avait une alerte de surpêche à Dakar..."
+3. HORAIRES DE MARÉE PAR VILLE:
+   - KAYAR: Marées disponibles (cherche "KAYAR" dans le contexte)
+   - DAKAR: Marées disponibles
+   - MBOUR: Marées disponibles
+   - SAINT-LOUIS: Marées disponibles
+   - JOAL: Marées disponibles
+   - KAOLACK: Ville INTÉRIEURE (pas de marée, utilise Dakar comme référence la plus proche)
 
-4. QUESTIONS SANS CONTEXTE TEMPOREL ("quel jour est risqué cette semaine?"):
-   - Par défaut, interprète comme FUTUR (à partir d'aujourd'hui)
-   - Si données futures manquantes, explique et propose d'analyser les tendances historiques
+4. CONSEILS INTELLIGENTS ET JUSTIFIÉS:
+   Quand on te demande "qu'elle conseille" ou "quand partir":
 
-5. Tu as DEJA les données météo ET marées en temps réel - UTILISE-LES pour les prévisions
-6. HEURE ACTUELLE: Vérifie toujours l'heure actuelle dans les données de marée
-7. RECOMMANDATIONS TEMPORELLES:
-   - Si l'utilisateur demande "quand aller pêcher" à 22h, ne recommande PAS 15h (c'est passé!)
-   - Compare TOUJOURS l'heure actuelle avec les horaires de marée
-   - Ne propose QUE des créneaux FUTURS (après l'heure actuelle)
-   - Si tous les créneaux d'aujourd'hui sont passés, propose DEMAIN
-   - EXEMPLE: Si on est à 22h et haute mer était à 17h50 -> propose les horaires de DEMAIN (06h15)
-8. REPONDS DIRECTEMENT selon le contexte temporel détecté
+   a) ANALYSE LA MÉTÉO:
+      - Vent: Si < 10 m/s = "Excellent, mer calme"
+             Si 10-15 m/s = "Acceptable, attention aux vagues"
+             Si > 15 m/s = "DANGEREUX, restez à terre"
+      - Température: Mentionne-la toujours
+      - Visibilité: Si < 5 km = "Visibilité réduite, soyez prudent"
 
-8. Analyse météo:
-   - Vent favorable si < 15 m/s (sinon dangereux)
-   - Visibilité bonne si > 5 km
-   - Température eau idéale: 20-25°C
+   b) ANALYSE LES MARÉES:
+      - Calcule les créneaux OPTIMAUX (2h avant marée haute)
+      - Vérifie l'HEURE ACTUELLE
+      - Si créneaux passés → propose DEMAIN
+      - JUSTIFIE: "La marée montante apporte nourriture et oxygène, les poissons sont actifs"
 
-9. FILTRAGE INTELLIGENT DES DONNEES CSV:
-   - Détecte le contexte temporel de la question (passé/présent/futur)
-   - Pour questions FUTURES: ne montre que dates >= {current_date}
-   - Pour questions PASSEES: montre les données historiques concernées
-   - Pour analyses de tendances: utilise toutes les données disponibles
-   - EXEMPLE 1: "Quel jour risqué cette semaine?" -> Analyse du {current_date} à +7 jours
-   - EXEMPLE 2: "Que s'est-il passé le 16 novembre?" -> Montre les données du 16/11/2024
-   - EXEMPLE 3: "Quelles sont les tendances de surpêche?" -> Analyse toutes les données historiques
+   c) DONNE UN CONSEIL COMPLET:
+      Format idéal:
+      "D'après les conditions actuelles:
+      - Météo: [température], vent [vitesse] → [évaluation]
+      - Marée haute à [heure]
+      - Meilleur créneau: [heure début]-[heure fin]
+      - Pourquoi: [justification basée sur marée et météo]"
 
-10. REGLES DES MAREES (TRES IMPORTANT - EXPLIQUE TOUJOURS):
-   MEILLEURS MOMENTS pour pêcher:
-      - 2h AVANT marée haute (marée montante = eau qui monte = nourriture + oxygène = poissons en chasse)
-      - 1h APRES marée haute (début descente = encore actifs)
-      - Pendant toute la MAREE MONTANTE (flux = mouvement = poissons actifs)
-   PIRES MOMENTS (NE PAS pêcher):
-      - Marée haute STATIONNAIRE (étale = eau immobile = poissons se reposent)
-      - Marée basse STATIONNAIRE (étale = pas de mouvement = poissons inactifs)
-      - Quand l'eau ne bouge pas = pas de nourriture en mouvement = poissons dorment
+5. QUESTIONS SUR LA PLATEFORME:
+   - Utilise les informations des fichiers PDF
+   - Sois précis sur les 6 fonctionnalités de SunuPecheNet
 
-   TOUJOURS EXPLIQUER:
-      - Pourquoi ce moment est bon/mauvais
-      - Le mouvement de l'eau (montante/descendante/stationnaire)
-      - Le comportement des poissons à ce moment
-      - Calculer les créneaux précis (ex: si haute mer à 18h35, alors pêcher 16h35-18h35)
+6. VILLES SPÉCIFIQUES:
+   - Si l'utilisateur mentionne SA ville (ex: "je suis de Kayar"), utilise les données de CETTE ville
+   - Adapte TOUS les conseils à sa localisation
+   - Mentionne la ville dans ta réponse
 
-11. Donne un verdict CLAIR avec CRENEAUX HORAIRES précis
-12. Pour les espèces, prix, captures: consulte les données CSV selon le contexte temporel
-
-IMPORTANT - GESTION CONTEXTUELLE DES DATES ET HEURES:
-- Aujourd'hui = {current_date}
-- Heure actuelle = {current_datetime}
-- VERIFIE TOUJOURS l'heure actuelle avant de recommander un créneau de pêche
-- Ne recommande JAMAIS un créneau passé (ex: si on est à 22h, ne dis pas "pêche à 15h")
-- Si question "quand aller pêcher" et on est tard le soir -> propose les créneaux de DEMAIN
-- Détecte les mots-clés temporels: "demain", "hier", "cette semaine", "la semaine dernière", dates spécifiques
-- Questions par défaut sur "cette semaine" ou "prochains jours" = FUTUR (du {current_date} au {(datetime.now() + timedelta(days=7)).strftime("%d/%m/%Y")})
-- Questions avec dates passées explicites = réponds avec données historiques
-- Sois CLAIR sur le contexte temporel dans ta réponse: "D'après les données du 16 novembre 2024..." ou "Pour les prochains jours..."
-- EXEMPLE CRITIQUE: Si on est le 26/11 à 22h et tu vois marée haute à 17h50 aujourd'hui -> c'est PASSE, propose 06h15 DEMAIN
+7. TON ET STYLE:
+   - Professionnel mais accessible
+   - Justifie TOUJOURS tes recommandations
+   - Pas d'emojis
+   - Concis mais complet
 
 {weather_context}
 
 {context}
 
-RAPPEL IMPORTANT:
-- Tu DOIS TOUJOURS expliquer POURQUOI un moment est bon ou mauvais
-- Mentionne le mouvement de l'eau (montante/descendante/stationnaire)
-- Explique le comportement des poissons selon la marée
-- Donne des créneaux horaires PRECIS calculés à partir des horaires de marée
-
-Tu as DEJA toutes les données (météo + marées) - réponds IMMEDIATEMENT sans demander d'infos supplémentaires!"""
+IMPORTANT: Les données météo et marées sont ci-dessus. LIS-LES et UTILISE-LES dans tes réponses!"""
     }
 
     try:
         response = client.chat.completions.create(
-            model="gpt-3.5-turbo",
+            model="gpt-4o-mini",  # Modèle plus récent avec 128k tokens
             messages=[system_message] + messages,
             temperature=0.3,
-            max_tokens=2000
+            max_tokens=1000
         )
         return response.choices[0].message.content
     except Exception as e:
-        return f"Erreur lors de la génération de la réponse: {e}"
+        return f"Erreur: {e}"
 
-# Initialiser l'état de session
+# ========== INITIALISATION ==========
+
 if "messages" not in st.session_state:
     st.session_state.messages = []
 
 if "data_loaded" not in st.session_state:
     st.session_state.data_loaded = False
-    st.session_state.csv_data = {}
+    st.session_state.all_data = {}
     st.session_state.context = ""
 
 # ========== SIDEBAR ==========
+
 with st.sidebar:
-    # Logo dans la sidebar
-    logo_path = Path("pages/image/logo_sunupechenet.png")
-    if not logo_path.exists():
-        logo_path = Path("image/logo_sunupechenet.png")
-    if not logo_path.exists():
-        logo_path = Path("logo_sunupechenet.png")
+    # Logo
+    logo_paths = [
+        Path("pages/image/logo_sunupechenet.png"),
+        Path("image/logo_sunupechenet.png"),
+        Path("logo_sunupechenet.png")
+    ]
 
-    if logo_path.exists():
-        st.image(str(logo_path), width=100)
+    for logo_path in logo_paths:
+        if logo_path.exists():
+            st.image(str(logo_path), width=100)
+            break
 
-    # Infos plateforme
     st.write("### SunuPecheNet")
-    st.write("*Assistant intelligent pour la pêche*")
+    st.write("*Assistant intelligent*")
     st.divider()
 
-    # Statut API
-    api_key = os.getenv("OPENAI_API_KEY")
-    owm_key = os.getenv("OWM_API_KEY")
-
-    if api_key:
-        st.success("IA activée")
-    else:
-        st.error("Clé OpenAI manquante")
-
-    if owm_key:
-        st.success("Météo activée")
-    else:
-        st.error("Clé OpenWeatherMap manquante")
-
-    st.divider()
-
-    # Actions
-    st.write("### Actions")
-
+    # Action unique
     if st.button("Effacer l'historique"):
         st.session_state.messages = []
-        st.success("Historique effacé")
         st.rerun()
 
-# ========== CHARGEMENT DES DONNÉES ==========
+# ========== CHARGEMENT DONNÉES (silencieux) ==========
+
 if not st.session_state.data_loaded:
-    with st.spinner("Chargement de la base de données..."):
-        csv_data = load_csv_data()
-        st.session_state.csv_data = csv_data
-        if st.session_state.csv_data:
-            st.session_state.context = create_context_from_data(st.session_state.csv_data)
-            st.session_state.data_loaded = True
-        else:
-            st.warning("Aucune donnée CSV trouvée")
+    all_data = load_all_data()
+    st.session_state.all_data = all_data
+    if all_data:
+        st.session_state.context = create_context_from_data(all_data)
+        st.session_state.data_loaded = True
 
-# ========== CHAT PRINCIPAL ==========
-st.title("SUNU PECHENET")
-st.subheader("Posez vos questions sur la pêche et la météo")
+# ========== CHAT ==========
 
-# Afficher l'historique
+st.title("SunuPecheNet")
+
+# Historique
 for message in st.session_state.messages:
     with st.chat_message(message["role"]):
         st.markdown(message["content"])
 
-# Input utilisateur
+# Message de bienvenue initial (une seule fois)
+if len(st.session_state.messages) == 0:
+    welcome_message = "Bienvenue dans le chatbot de SunuPecheNet !"
+    with st.chat_message("assistant"):
+        st.markdown(welcome_message)
+    st.session_state.messages.append({"role": "assistant", "content": welcome_message})
+
+# Input
 if prompt := st.chat_input("Posez votre question..."):
     st.session_state.messages.append({"role": "user", "content": prompt})
 
@@ -493,7 +582,7 @@ if prompt := st.chat_input("Posez votre question..."):
         st.markdown(prompt)
 
     with st.chat_message("assistant"):
-        with st.spinner("Analyse en cours..."):
+        with st.spinner(" Analyse..."):
             response = get_chatbot_response(
                 st.session_state.messages,
                 st.session_state.context,

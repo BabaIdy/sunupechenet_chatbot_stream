@@ -1,0 +1,675 @@
+{
+    "metadata": {
+        "annee": 2019,
+        "pays": "Sénégal",
+        "source": "DPM - Rapport Statistique 2019",
+        "version": "A1-optimisee-simple"
+    },
+    "artisanale_debarquements_region_mois": [
+        {
+            "region": "Dakar",
+            "mois": "Janvier",
+            "tonnes": 6653
+        },
+        {
+            "region": "Dakar",
+            "mois": "Février",
+            "tonnes": 5987
+        },
+        {
+            "region": "Dakar",
+            "mois": "Mars",
+            "tonnes": 5998
+        },
+        {
+            "region": "Dakar",
+            "mois": "Avril",
+            "tonnes": 7534
+        },
+        {
+            "region": "Dakar",
+            "mois": "Mai",
+            "tonnes": 9483
+        },
+        {
+            "region": "Dakar",
+            "mois": "Juin",
+            "tonnes": 13467
+        },
+        {
+            "region": "Dakar",
+            "mois": "Juillet",
+            "tonnes": 10497
+        },
+        {
+            "region": "Dakar",
+            "mois": "Août",
+            "tonnes": 14895
+        },
+        {
+            "region": "Dakar",
+            "mois": "Septembre",
+            "tonnes": 5493
+        },
+        {
+            "region": "Dakar",
+            "mois": "Octobre",
+            "tonnes": 5695
+        },
+        {
+            "region": "Dakar",
+            "mois": "Novembre",
+            "tonnes": 6313
+        },
+        {
+            "region": "Dakar",
+            "mois": "Décembre",
+            "tonnes": 6497
+        },
+        {
+            "region": "Thiès",
+            "mois": "Janvier",
+            "tonnes": 17854
+        },
+        {
+            "region": "Thiès",
+            "mois": "Février",
+            "tonnes": 9671
+        },
+        {
+            "region": "Thiès",
+            "mois": "Mars",
+            "tonnes": 9893
+        },
+        {
+            "region": "Thiès",
+            "mois": "Avril",
+            "tonnes": 15490
+        },
+        {
+            "region": "Thiès",
+            "mois": "Mai",
+            "tonnes": 28781
+        },
+        {
+            "region": "Thiès",
+            "mois": "Juin",
+            "tonnes": 25574
+        },
+        {
+            "region": "Thiès",
+            "mois": "Juillet",
+            "tonnes": 22029
+        },
+        {
+            "region": "Thiès",
+            "mois": "Août",
+            "tonnes": 12954
+        },
+        {
+            "region": "Thiès",
+            "mois": "Septembre",
+            "tonnes": 11764
+        },
+        {
+            "region": "Thiès",
+            "mois": "Octobre",
+            "tonnes": 11314
+        },
+        {
+            "region": "Thiès",
+            "mois": "Novembre",
+            "tonnes": 10066
+        },
+        {
+            "region": "Thiès",
+            "mois": "Décembre",
+            "tonnes": 16038
+        },
+        {
+            "region": "Saint-Louis",
+            "mois": "Janvier",
+            "tonnes": 7276
+        },
+        {
+            "region": "Saint-Louis",
+            "mois": "Février",
+            "tonnes": 8623
+        },
+        {
+            "region": "Saint-Louis",
+            "mois": "Mars",
+            "tonnes": 5186
+        },
+        {
+            "region": "Saint-Louis",
+            "mois": "Avril",
+            "tonnes": 7099
+        },
+        {
+            "region": "Saint-Louis",
+            "mois": "Mai",
+            "tonnes": 3315
+        },
+        {
+            "region": "Saint-Louis",
+            "mois": "Juin",
+            "tonnes": 6650
+        },
+        {
+            "region": "Saint-Louis",
+            "mois": "Juillet",
+            "tonnes": 7025
+        },
+        {
+            "region": "Saint-Louis",
+            "mois": "Août",
+            "tonnes": 1134
+        },
+        {
+            "region": "Saint-Louis",
+            "mois": "Septembre",
+            "tonnes": 335
+        },
+        {
+            "region": "Saint-Louis",
+            "mois": "Octobre",
+            "tonnes": 280
+        },
+        {
+            "region": "Saint-Louis",
+            "mois": "Novembre",
+            "tonnes": 1034
+        },
+        {
+            "region": "Saint-Louis",
+            "mois": "Décembre",
+            "tonnes": 8137
+        },
+        {
+            "region": "Ziguinchor",
+            "mois": "Janvier",
+            "tonnes": 7690
+        },
+        {
+            "region": "Ziguinchor",
+            "mois": "Février",
+            "tonnes": 5313
+        },
+        {
+            "region": "Ziguinchor",
+            "mois": "Mars",
+            "tonnes": 8120
+        },
+        {
+            "region": "Ziguinchor",
+            "mois": "Avril",
+            "tonnes": 8003
+        },
+        {
+            "region": "Ziguinchor",
+            "mois": "Mai",
+            "tonnes": 7842
+        },
+        {
+            "region": "Ziguinchor",
+            "mois": "Juin",
+            "tonnes": 3760
+        },
+        {
+            "region": "Ziguinchor",
+            "mois": "Juillet",
+            "tonnes": 5528
+        },
+        {
+            "region": "Ziguinchor",
+            "mois": "Août",
+            "tonnes": 5479
+        },
+        {
+            "region": "Ziguinchor",
+            "mois": "Septembre",
+            "tonnes": 2901
+        },
+        {
+            "region": "Ziguinchor",
+            "mois": "Octobre",
+            "tonnes": 5853
+        },
+        {
+            "region": "Ziguinchor",
+            "mois": "Novembre",
+            "tonnes": 8182
+        },
+        {
+            "region": "Ziguinchor",
+            "mois": "Décembre",
+            "tonnes": 6148
+        },
+        {
+            "region": "Fatick",
+            "mois": "Janvier",
+            "tonnes": 1063
+        },
+        {
+            "region": "Fatick",
+            "mois": "Février",
+            "tonnes": 2805
+        },
+        {
+            "region": "Fatick",
+            "mois": "Mars",
+            "tonnes": 1560
+        },
+        {
+            "region": "Fatick",
+            "mois": "Avril",
+            "tonnes": 1568
+        },
+        {
+            "region": "Fatick",
+            "mois": "Mai",
+            "tonnes": 2004
+        },
+        {
+            "region": "Fatick",
+            "mois": "Juin",
+            "tonnes": 1621
+        },
+        {
+            "region": "Fatick",
+            "mois": "Juillet",
+            "tonnes": 1117
+        },
+        {
+            "region": "Fatick",
+            "mois": "Août",
+            "tonnes": 877
+        },
+        {
+            "region": "Fatick",
+            "mois": "Septembre",
+            "tonnes": 887
+        },
+        {
+            "region": "Fatick",
+            "mois": "Octobre",
+            "tonnes": 1002
+        },
+        {
+            "region": "Fatick",
+            "mois": "Novembre",
+            "tonnes": 1033
+        },
+        {
+            "region": "Fatick",
+            "mois": "Décembre",
+            "tonnes": 1011
+        },
+        {
+            "region": "Louga",
+            "mois": "Janvier",
+            "tonnes": 314
+        },
+        {
+            "region": "Louga",
+            "mois": "Février",
+            "tonnes": 115
+        },
+        {
+            "region": "Louga",
+            "mois": "Mars",
+            "tonnes": 239
+        },
+        {
+            "region": "Louga",
+            "mois": "Avril",
+            "tonnes": 175
+        },
+        {
+            "region": "Louga",
+            "mois": "Mai",
+            "tonnes": 340
+        },
+        {
+            "region": "Louga",
+            "mois": "Juin",
+            "tonnes": 598
+        },
+        {
+            "region": "Louga",
+            "mois": "Juillet",
+            "tonnes": 212
+        },
+        {
+            "region": "Louga",
+            "mois": "Août",
+            "tonnes": 70
+        },
+        {
+            "region": "Louga",
+            "mois": "Septembre",
+            "tonnes": 63
+        },
+        {
+            "region": "Louga",
+            "mois": "Octobre",
+            "tonnes": 69
+        },
+        {
+            "region": "Louga",
+            "mois": "Novembre",
+            "tonnes": 59
+        },
+        {
+            "region": "Louga",
+            "mois": "Décembre",
+            "tonnes": 70
+        },
+        {
+            "region": "Kaolack",
+            "mois": "Janvier",
+            "tonnes": 48
+        },
+        {
+            "region": "Kaolack",
+            "mois": "Février",
+            "tonnes": 52
+        },
+        {
+            "region": "Kaolack",
+            "mois": "Mars",
+            "tonnes": 48
+        },
+        {
+            "region": "Kaolack",
+            "mois": "Avril",
+            "tonnes": 68
+        },
+        {
+            "region": "Kaolack",
+            "mois": "Mai",
+            "tonnes": 73
+        },
+        {
+            "region": "Kaolack",
+            "mois": "Juin",
+            "tonnes": 66
+        },
+        {
+            "region": "Kaolack",
+            "mois": "Juillet",
+            "tonnes": 67
+        },
+        {
+            "region": "Kaolack",
+            "mois": "Août",
+            "tonnes": 48
+        },
+        {
+            "region": "Kaolack",
+            "mois": "Septembre",
+            "tonnes": 71
+        },
+        {
+            "region": "Kaolack",
+            "mois": "Octobre",
+            "tonnes": 95
+        },
+        {
+            "region": "Kaolack",
+            "mois": "Novembre",
+            "tonnes": 121
+        },
+        {
+            "region": "Kaolack",
+            "mois": "Décembre",
+            "tonnes": 120
+        }
+    ],
+    "artisanale_permis": [
+        {
+            "region": "Louga",
+            "pirogues_actives": 118,
+            "permis_A": 0,
+            "permis_B": 200,
+            "permis_C": 0,
+            "permis_C_etranger": 0,
+            "total_permis_region": 200
+        },
+        {
+            "region": "Fatick",
+            "pirogues_actives": 1305,
+            "permis_A": 147,
+            "permis_B": 1335,
+            "permis_C": 452,
+            "permis_C_etranger": 0,
+            "total_permis_region": 1934
+        },
+        {
+            "region": "Thiès",
+            "pirogues_actives": 4174,
+            "permis_A": 0,
+            "permis_B": 3027,
+            "permis_C": 498,
+            "permis_C_etranger": 0,
+            "total_permis_region": 3525
+        },
+        {
+            "region": "Dakar",
+            "pirogues_actives": 3819,
+            "permis_A": 0,
+            "permis_B": 1146,
+            "permis_C": 381,
+            "permis_C_etranger": 0,
+            "total_permis_region": 1527
+        },
+        {
+            "region": "Ziguinchor",
+            "pirogues_actives": 2202,
+            "permis_A": 0,
+            "permis_B": 1141,
+            "permis_C": 321,
+            "permis_C_etranger": 7,
+            "total_permis_region": 1469
+        },
+        {
+            "region": "Saint-Louis",
+            "pirogues_actives": 1037,
+            "permis_A": 0,
+            "permis_B": 966,
+            "permis_C": 774,
+            "permis_C_etranger": 0,
+            "total_permis_region": 1740
+        },
+        {
+            "region": "Kaolack",
+            "pirogues_actives": 208,
+            "permis_A": 2,
+            "permis_B": 7,
+            "permis_C": 1,
+            "permis_C_etranger": 0,
+            "total_permis_region": 10
+        },
+        {
+            "region": "TOTAL_NATIONAL",
+            "pirogues_actives": 12864,
+            "permis_A": 149,
+            "permis_B": 7822,
+            "permis_C": 2427,
+            "permis_C_etranger": 7,
+            "total_permis_national": 10405
+        }
+    ],
+    "artisanale_carburant_region_mois": [
+        {
+            "region": "Dakar",
+            "mois": "Janvier",
+            "litres_milliers": 990
+        },
+        {
+            "region": "Dakar",
+            "mois": "Février",
+            "litres_milliers": 985
+        },
+        {
+            "region": "Dakar",
+            "mois": "Mars",
+            "litres_milliers": 1202
+        },
+        {
+            "region": "Dakar",
+            "mois": "Avril",
+            "litres_milliers": 1167
+        },
+        {
+            "region": "Dakar",
+            "mois": "Mai",
+            "litres_milliers": 1200
+        },
+        {
+            "region": "Dakar",
+            "mois": "Juin",
+            "litres_milliers": 1273
+        },
+        {
+            "region": "Dakar",
+            "mois": "Juillet",
+            "litres_milliers": 1283
+        },
+        {
+            "region": "Dakar",
+            "mois": "Août",
+            "litres_milliers": 659
+        },
+        {
+            "region": "Dakar",
+            "mois": "Septembre",
+            "litres_milliers": 1153
+        },
+        {
+            "region": "Dakar",
+            "mois": "Octobre",
+            "litres_milliers": 938
+        },
+        {
+            "region": "Dakar",
+            "mois": "Novembre",
+            "litres_milliers": 1069
+        },
+        {
+            "region": "Dakar",
+            "mois": "Décembre",
+            "litres_milliers": 1079
+        },
+        {
+            "region": "Dakar",
+            "total_litres_milliers": 12998
+        },
+        {
+            "region": "Thiès",
+            "mois": "Janvier",
+            "litres_milliers": 2439
+        },
+        {
+            "region": "Thiès",
+            "mois": "Février",
+            "litres_milliers": 2001
+        },
+        {
+            "region": "Thiès",
+            "mois": "Mars",
+            "litres_milliers": 2459
+        },
+        {
+            "region": "Thiès",
+            "mois": "Avril",
+            "litres_milliers": 2206
+        },
+        {
+            "region": "Thiès",
+            "mois": "Mai",
+            "litres_milliers": 3229
+        },
+        {
+            "region": "Thiès",
+            "mois": "Juin",
+            "litres_milliers": 4985
+        },
+        {
+            "region": "Thiès",
+            "mois": "Juillet",
+            "litres_milliers": 2269
+        },
+        {
+            "region": "Thiès",
+            "mois": "Août",
+            "litres_milliers": 1928
+        },
+        {
+            "region": "Thiès",
+            "mois": "Septembre",
+            "litres_milliers": 2422
+        },
+        {
+            "region": "Thiès",
+            "mois": "Octobre",
+            "litres_milliers": 2147
+        },
+        {
+            "region": "Thiès",
+            "mois": "Novembre",
+            "litres_milliers": 2085
+        },
+        {
+            "region": "Thiès",
+            "mois": "Décembre",
+            "litres_milliers": 2610
+        },
+        {
+            "region": "Thiès",
+            "total_litres_milliers": 30779
+        },
+        {
+            "region": "Saint-Louis",
+            "total_litres_milliers": 3135
+        },
+        {
+            "region": "Ziguinchor",
+            "total_litres_milliers": 10838
+        },
+        {
+            "region": "Fatick",
+            "total_litres_milliers": 6273
+        },
+        {
+            "region": "Louga",
+            "total_litres_milliers": 1444
+        },
+        {
+            "region": "Kaolack",
+            "total_litres_milliers": 623
+        }
+    ],
+    "industrielle_synthese": {
+        "debarquements_tonnes": 92875.49,
+        "vce_milliards_fcfa": 78.87608142,
+        "part_volume_percent": 17,
+        "flotte_licenciee_total": 197,
+        "navires_ayant_peche": 129,
+        "part_nationaux_percent": 88,
+        "part_etrangers_percent": 12
+    },
+    "transformation_synthese": {
+        "volume_transforme_tonnes": 56860.91,
+        "valeur_milliards_fcfa": 53.15044804
+    },
+    "commercialisation_synthese": {
+        "exportations": {
+            "volume_tonnes": 311882.51,
+            "vce_milliards_fcfa": 308.20833126
+        },
+        "importations_total_tonnes": 6018.04,
+        "distribution_locale_tonnes": 50810
+    }
+}

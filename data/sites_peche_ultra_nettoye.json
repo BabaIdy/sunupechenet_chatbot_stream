@@ -1,0 +1,1144 @@
+{
+  "sites": {
+    "Ouakam": {
+      "nom": "Ouakam",
+      "demographie": {
+        "classe_age_modale": "> 65 ans",
+        "migrations_presentes": true,
+        "pourcentages_mentionnes": [
+          "72 %",
+          "100 %",
+          "60 %",
+          "21 %",
+          "53 %",
+          "93 %"
+        ]
+      },
+      "engins": [
+        "FD",
+        "FDF",
+        "FDRR",
+        "FDY",
+        "FMDS",
+        "FME",
+        "LCS",
+        "LSM",
+        "PSM",
+        "casier",
+        "chalut",
+        "filet"
+      ],
+      "initiatives_locales_clean": [
+        "L’ILCP, connue par les 2/3 des acteurs renvoie, selon le cas, à des immersions (IRA et IPP), des interdictions (FMDS, PSM et explosifs) et à l’implantation d’espaces réglementés (i",
+        "Ngor et Yoff brillent par la pratique de la mixité, la méconnaissance du CLP et de l’IL pêcheurs pratiquant surtout la mixité voire spécialistes de FDF",
+        "Plus de la moitié (53 %) d’entre eux sont membres du CLP, 4/15 d’une autre OGLP tandis que 93 % connaissent l’ILCP qui consiste en des immersions, au RB, à la surveillance et à la mise en place d’espaces protégés (ZPP, AMP ou « parc »)",
+        "A Guéréo, 3/5 des acteurs adhèrent à une autre OGLP, tous connaissent l’ILCP : des immersions, comme à la S onsiste en des immersions, au RB, à la surveillance et à la mise en place d’espaces protégés (ZPP, AMP ou « parc »)",
+        "73 eté maritime et de la protection de l'environnement marin HB : hors-bord (moteur) IFREMER : Institut français d’exploitation de la mer INN : pêche illégale, non déclarée et non réglementée IPP : immersion de pots (« canaris ») à poulpe IRA : immersion de récifs artificiels ISCOS : ONG italienne",
+        "CONTEXTE DE L’ETUDE Le Projet de Gestion des Ressources Naturelles au Sénégal êche au Sénégal (GAIPES), ses membres estiment qu’il est temps que le CAPS soit reconnu et dispose de licences de pêche industrielle",
+        "La ZPP de Ouakam ne semble pas être extensible à Ngor et à Yoff",
+        "La ZPP de Ouakam ne semble pas être extensible à Ngor et à Yoff",
+        "Cette ILCP est diversement appelée à Ouakam : - immersion de récifs artificiels-pots (IRA-IPP) 84 - - - - interdiction de la pêche au FMDS interdiction de la PSM interdiction de la pêche aux explosifs implantation de ZPP-AMP-« Parc » L’article 21 de la loi Sané, 2008)",
+        "Programme d'immersion des récifs artificiels pour une gestion durable de la pêche au Sénégal",
+        "in HB : hors-bord (moteur) IFREMER : Institut français d’exploitation de la mer INN : pêche illégale, non déclarée et non réglementée IPP : immersion de pots (« canaris ») à poulpe IRA : immersion de récifs artificiels ISCOS : ONG italienne",
+        "Le choix des espèces (économiques) par les pêcheurs iative locale de cogestion principale (ILCP) du site, tandis que les réponses « ne sait pas » (NSP) sont les seules notées à Ngor et Yoff"
+      ],
+      "besoins_clean": [
+        "tivité du secteur des pêches et de l’aquaculture » du Projet de Gestion des Ressources Naturelles au Sénégal (SENRM, P175915)",
+        "83 abinets d’expertise, les structu ribuer à une bonne gestion de la ressource",
+        "Au niveau des sites de réplication, l’information principale est portée par la variable à travers laquelle il est demandé à l’acteur de se prononcer sur le besoin d des ressources La précision des informations justifie en partie le choix du plan de sondage stratifié",
+        "Pour diminuer les coûts des allocations, au lieu des recensements, on procède par approc ribuer à une bonne gestion de la ressource",
+        "Quel que soit le cas, on s’intéresse d’abord aux variables statistiquement interdépendant(e)s sur la base du p-value et du V de Cramer26 : le de cogestion",
+        "L’existence d’une initiative locale de gestion de la pêcherie portée par les CLPA, le niveau d’implication des acteurs et suivant leurs professions ont également une influence sur le besoin de la congestion dans les sites de réplications",
+        "Le caractère participatif de telles initiatives est une belle illustration de la démarche de cogestion",
+        ") et d’utilisation d’engins de pêche interdits (FMF, senne de pla uche), en voie d’immersion (à droite)",
+        "9 (Programme de) Gest e, il visait à promouvoir la cogestion des pêcheries artisanales dans 4 sites pilotes : Ouakam, Ngaparou, Foundiougne et Bétenty",
+        "11 Projet d'Appui à la Gestion des Pêches Artisanales Transfrontalières",
+        "Fief de la confrérie layène par excellence, c’est l'un des ports de pêche traditionnels les plus importants du Sénégal",
+        "La pêche et ses activités annexes constituent la base de l'économie locale, l'agriculture et l'élevage arrivant à peine à subvenir aux besoins propres de la ville"
+      ]
+    },
+    "Ngor": {
+      "nom": "Ngor",
+      "demographie": {
+        "classe_age_modale": "> 65 ans",
+        "migrations_presentes": true,
+        "pourcentages_mentionnes": [
+          "72 %",
+          "100 %",
+          "60 %",
+          "21 %",
+          "53 %",
+          "93 %"
+        ]
+      },
+      "engins": [
+        "FD",
+        "FDF",
+        "FDRR",
+        "FDY",
+        "FMDS",
+        "FME",
+        "LCS",
+        "LSM",
+        "PSM",
+        "casier",
+        "chalut",
+        "filet"
+      ],
+      "initiatives_locales_clean": [
+        "L’ILCP, connue par les 2/3 des acteurs renvoie, selon le cas, à des immersions (IRA et IPP), des interdictions (FMDS, PSM et explosifs) et à l’implantation d’espaces réglementés (i",
+        "L’ILCP, connue par les 2/3 des acteurs renvoie, selon le cas, à des immersions (IRA et IPP), des interdictions (FMDS, PSM et explosifs) et à l’implantation d’espaces réglementés (i",
+        "Ngor et Yoff brillent par la pratique de la mixité, la méconnaissance du CLP et de l’IL pêcheurs pratiquant surtout la mixité voire spécialistes de FDF",
+        "Plus de la moitié (53 %) d’entre eux sont membres du CLP, 4/15 d’une autre OGLP tandis que 93 % connaissent l’ILCP qui consiste en des immersions, au RB, à la surveillance et à la mise en place d’espaces protégés (ZPP, AMP ou « parc »)",
+        "A Guéréo, 3/5 des acteurs adhèrent à une autre OGLP, tous connaissent l’ILCP : des immersions, comme à la S onsiste en des immersions, au RB, à la surveillance et à la mise en place d’espaces protégés (ZPP, AMP ou « parc »)",
+        "A Saly, la connaissance de l’ILCP (interdiction de la pêche des juvéniles + existence iverses initiatives, il faudrait réactive ialistes de FDF",
+        "Plus de la moitié (53 %) d’entre eux sont membres du CLP, 4/15 d’une autre OGLP tandis que 93 % connaissent l’ILCP qui consiste en des immersions, au RB, à la surveillance et à la mise en place d’espaces protégés (ZPP, AMP ou « parc »)",
+        "Le choix des espèces (économiques) par les pêcheurs iative locale de cogestion principale (ILCP) du site, tandis que les réponses « ne sait pas » (NSP) sont les seules notées à Ngor et Yoff",
+        "Outre les facteurs de succès ou d’éch engins de pêche passifs et sélectifs (Sène et Sané, 2008)",
+        "Il en existe 3 catégories (i) les récifs de production, véritables « maisons à poissons », créateurs de biodiversité et de biomasse (ii) les récifs de « protection » pour réduire les nuisances liées au chalutage illégal dans la bande côtiè engins de pêche passifs et sélectifs (Sène et Sané, 2008)",
+        "A Ouakam, le récif artifici iii) les récifs « paysagers », ayant un objectif plus récréatif et ludique pour la plongée sous-marine ou la pêche récréative (Nguer cité par Ndao et Bonnin, année - Sène et Sané, 2008)",
+        "Programme d'immersion des récifs artificiels pour une gestion durable de la pêche au Sénégal"
+      ],
+      "besoins_clean": [
+        "tivité du secteur des pêches et de l’aquaculture » du Projet de Gestion des Ressources Naturelles au Sénégal (SENRM, P175915)",
+        "Ouakam regorge d’acteurs séniors (> 65 ans), au cursus coranique, spécialisés (fileyeurs, ligneurs ou plongeurs), connaissant quasiment to des ports de pêche traditionnels les plus importants du Sénégal",
+        "La pêche et ses activités annexes constituent la base de l'économie locale, l'agriculture et l'élevage arrivant à peine à subvenir aux besoins propres de la ville",
+        "Soumbédioune Situé sur la ribuer à une bonne gestion de la ressource",
+        "Pour diminuer les coûts des allocations, au lieu des recensements, on procède ribuer à une bonne gestion de la ressource",
+        "Quel que soit le cas, on s’intéresse d’abord aux variables statistiquement interdépendant(e)s sur la base du p-value et du V de Cramer26 : le de cogestion",
+        "L’existence d’une initiative locale de gestion de la pêcherie portée par les CLPA, le niveau d’implication des acteurs et suivant leurs professions ont également une influence sur le besoin de la congestion dans les sites de réplications",
+        "Pour diminuer les coûts des allocations, au lieu des recensements, on procède par approche de sondage, ensuite on fait de l’inférence (extra rès (i) utilité pour la gestion de la ressource (ii) efficacité à bien remplir sa mission (iii) capacité à bien contribuer à une bonne gestion de la ressource",
+        "Relations avec les pêcheurs des site à Ouakam, peuvent être une source de blocage pour l’extension ; ce qui n’est pas le cas pour Ngaparou",
+        "Disposer de spécialistes pour la surveillance, assurer la reconversion des acteurs vers d'autres métiers, améliorer la formation multiforme (sur le Code, la gestion des conflits, la GRH, les aspects juridiques, la recherche de partenaires, l’élaboration de projets, la recherche participative, etc",
+        "Ces moyens qui sont de nature à consolider ou faciliter l’extension de l’OGLP et/ou de son ILCP ont plusieurs supports possibles, côté Etat : réactivation-promotion de mesures d’accompagnement (formation, appui juridique, AGR, surveillance et recherche participatives, etc",
+        "Plus de la moitié (53 %) d’entre eux sont membres du CLP, 4/15 d’une autre OGLP tandis que 93 % connaissent l’ILCP qui consiste en des immersions, au RB, à la surveillance et à la mise en place d’espaces protégés (ZPP, AMP ou « parc »)"
+      ]
+    },
+    "Yoff": {
+      "nom": "Yoff",
+      "demographie": {
+        "classe_age_modale": "> 65 ans",
+        "migrations_presentes": true,
+        "pourcentages_mentionnes": [
+          "72 %",
+          "100 %",
+          "60 %",
+          "21 %",
+          "53 %",
+          "93 %"
+        ]
+      },
+      "engins": [
+        "FD",
+        "FDF",
+        "FDRR",
+        "FDY",
+        "FMDS",
+        "FME",
+        "LCS",
+        "LSM",
+        "PSM",
+        "casier",
+        "chalut",
+        "filet"
+      ],
+      "initiatives_locales_clean": [
+        "L’ILCP, connue par les 2/3 des acteurs renvoie, selon le cas, à des immersions (IRA et IPP), des interdictions (FMDS, PSM et explosifs) et à l’implantation d’espaces réglementés (i",
+        "L’ILCP, connue par les 2/3 des acteurs renvoie, selon le cas, à des immersions (IRA et IPP), des interdictions (FMDS, PSM et explosifs) et à l’implantation d’espaces réglementés (i",
+        "Ngor et Yoff brillent par la pratique de la mixité, la méconnaissance du CLP et de l’IL pêcheurs pratiquant surtout la mixité voire spécialistes de FDF",
+        "Plus de la moitié (53 %) d’entre eux sont membres du CLP, 4/15 d’une autre OGLP tandis que 93 % connaissent l’ILCP qui consiste en des immersions, au RB, à la surveillance et à la mise en place d’espaces protégés (ZPP, AMP ou « parc »)",
+        "A Guéréo, 3/5 des acteurs adhèrent à une autre OGLP, tous connaissent l’ILCP : des immersions, comme à la S onsiste en des immersions, au RB, à la surveillance et à la mise en place d’espaces protégés (ZPP, AMP ou « parc »)",
+        "A Saly, la connaissance de l’ILCP (interdiction de la pêche des juvéniles + existence ves, il faudrait réactiver les me ire spécialistes de FDF",
+        "Plus de la moitié (53 %) d’entre eux sont membres du CLP, 4/15 d’une autre OGLP tandis que 93 % connaissent l’ILCP qui consiste en des immersions, au RB, à la surveillance et à la mise en place d’espaces protégés (ZPP, AMP ou « parc »)",
+        "Dans les autres sites, on peut noter en résumé ceci ( TYPE DE SITE Conformément à l’objecti engins de pêche passifs et sélectifs (Sène et Sané, 2008)",
+        "engins de pêche passifs et sélectifs (Sène et Sané, 2008)",
+        "Outre les facteurs de succès ou d’échec de ces IGC-Co-PA, leur extension et le développement d’initiatives ns de concentration de celles-ci, d’obstacles pour la pêche au chalut et autres dragues, contrairement aux engins de pêche passifs et sélectifs (Sène et Sané, 2008)",
+        "Il en existe 3 catégories (i) les récifs de production, véritables « maisons à poissons », créateurs de biodiversité et de biomasse (ii) les récifs de « protection » pour réduire les nuisances liées au chalutage illégal dans la bande côtiè engins de pêche passifs et sélectifs (Sène et Sané, 2008)",
+        "A Ouakam, le récif artifici iii) les récifs « paysagers », ayant un objectif plus récréatif et ludique pour la plongée sous-marine ou la pêche récréative (Nguer cité par Ndao et Bonnin, année - Sène et Sané, 2008)"
+      ],
+      "besoins_clean": [
+        "tivité du secteur des pêches et de l’aquaculture » du Projet de Gestion des Ressources Naturelles au Sénégal (SENRM, P175915)",
+        "Ouakam regorge d’acteurs séniors (> 65 ans), au cursus coranique, spécialisés (fileyeurs, ligneurs ou plongeurs), connaissant quasiment to des ports de pêche traditionnels les plus importants du Sénégal",
+        "La pêche et ses activités annexes constituent la base de l'économie locale, l'agriculture et l'élevage arrivant à peine à subvenir aux besoins propres de la ville",
+        "Soumbédioune Situé sur la ribuer à une bonne gestion de la ressource",
+        "Pour diminuer les coûts des allocations, au lieu des recensements, on procède par a ribuer à une bonne gestion de la ressource",
+        "Quel que soit le cas, on s’intéresse d’abord aux variables statistiquement interdépendant(e)s sur la base du p-value et du V de Cramer26 : le de cogestion",
+        "L’existence d’une initiative locale de gestion de la pêcherie portée par les CLPA, le niveau d’implication des acteurs et suivant leurs professions ont également une influence sur le besoin de la congestion dans les sites de réplications",
+        "A terme, il est apparu nécessaire, entre autres recommandations fortes, de mettre en place, renforcer ou rendre plus efficientes des activités génératrices de revenus (AGR) en vue d’une bonne mise en œuvre 113 de l'initiative locale de cogestion (ILC) propre à chaque site",
+        "A cette fin, le projet SENRM, à travers le présent avis d’appel à manifestation d’intérêt, envisa vre 113 de l'initiative locale de cogestion (ILC) propre à chaque site",
+        "Une AGR consiste en la fourniture de services et/ou de biens par les acteurs, de la pêche ici",
+        "Outre le renforcement de l’ILC en tout site d’exercice (de consolidation et/ou d’extension), elle devrait être r ctionnement de l’organisation locale de gestion de la pêche, voire aussi les conditions de vie des acteurs",
+        "Par d’exemple, l’aviculture, la pisciculture et la quincaillerie maritime sont citées comme AGR ayant existé ou résiduelles par les différents acteurs de la pêche interviewés lors de ladite étude"
+      ]
+    },
+    "Soumbédioune": {
+      "nom": "Soumbédioune",
+      "demographie": {
+        "classe_age_modale": "> 65 ans",
+        "migrations_presentes": true,
+        "pourcentages_mentionnes": [
+          "72 %",
+          "100 %",
+          "60 %",
+          "21 %",
+          "53 %",
+          "93 %"
+        ]
+      },
+      "engins": [
+        "FD",
+        "FDF",
+        "FDRR",
+        "FDY",
+        "FMDS",
+        "FME",
+        "LCS",
+        "LSM",
+        "PSM",
+        "casier",
+        "filet",
+        "ligne"
+      ],
+      "initiatives_locales_clean": [
+        "L’ILCP, connue par les 2/3 des acteurs renvoie, selon le cas, à des immersions (IRA et IPP), des interdictions (FMDS, PSM et explosifs) et à l’implantation d’espaces réglementés (i",
+        "Ngor et Yoff brillent par la pratique de la mixité, la méconnaissance du CLP et de l’IL pêcheurs pratiquant surtout la mixité voire spécialistes de FDF",
+        "Plus de la moitié (53 %) d’entre eux sont membres du CLP, 4/15 d’une autre OGLP tandis que 93 % connaissent l’ILCP qui consiste en des immersions, au RB, à la surveillance et à la mise en place d’espaces protégés (ZPP, AMP ou « parc »)",
+        "A Guéréo, 3/5 des acteurs adhèrent à une autre OGLP, tous connaissent l’ILCP : des immersions, comme à la S onsiste en des immersions, au RB, à la surveillance et à la mise en place d’espaces protégés (ZPP, AMP ou « parc »)",
+        "A Saly, la connaissance de l’ILCP (interdiction de la pêche des juvéniles + existence",
+        "Programme d'immersion des récifs artificiels pour une gestion durable de la pêche au Sénégal",
+        "Dans les autres sites, on peut noter en résumé ceci ( ure ZPP : zone de pêche protégée ZEE : zone économique exclusive 15 1",
+        "CONTEXTE DE L’ETUDE Le Projet de Gestion des Ressources Naturelles au Sénégal (SENRM, P175915) implique les ministères de la Pêche et de (49 %)",
+        ") et d’utilisation d’engins de pêche interdits (FMF, senne de plage, dimensions et maillages non réglementaires, etc",
+        "), baliser au préalable ceux-ci, affecter des personnels administr ites voisins (ex RB) participe de l’équité ; l’extension ouvre un vaste chantier pour un aménagement départemental des pêches",
+        "Pendant 7 mois, les survivants y ont occupé un camp qu’on leur avait aménagé",
+        "La quasi-totalité des plages du littor les structures en charge des initiatives de gestion communautaire et de la cogestion locale (CLP, CLPA, Comités de gestion des aires marines protégées 19 …), les organisations non gouvernementales (RAMPAO 20 , PRCM 21 , CSRP22, UICN23, OCEANIUM24, WIA25…), etc"
+      ],
+      "besoins_clean": [
+        "tivité du secteur des pêches et de l’aquaculture » du Projet de Gestion des Ressources Naturelles au Sénégal (SENRM, P175915)",
+        "Pour diminuer les coûts des allocations, au lieu des recense ribuer à une bonne gestion de la ressource",
+        "Quel que soit le cas, on s’intéresse d’abord aux variables statistiquement interdépendant(e)s sur la base du p-value et du V de Cramer26 : le de cogestion",
+        "L’existence d’une initiative locale de gestion de la pêcherie portée par les CLPA, le niveau d’implication des acteurs et suivant leurs professions ont également une influence sur le besoin de la congestion dans les sites de réplications",
+        "ations permettront de formuler des consolidations et d’extension, ces recommandations pour une gestion partagée, entre l’état et les acteurs, des pêcheries",
+        "A terme, il est apparu nécessaire, entre autres recommandations fortes, de mettre en place, renforcer ou rendre plus efficientes des activités génératrices de revenus (AGR) en vue d’une bonne mise en œuvre 113 de l'initiative locale de cogestion (ILC) propre à ch",
+        "en l’interdiction de la pêche nocturne (juillet-novembre) et en la mise en œuvre de la surveillance (engins et mailles autorisés)",
+        "88 11 LISTE DES ACRONYMES ET DES ABREVIATIONS ABER : Anse Bernard ADMI : administration AGR : activité génératrice de revenus AJ : appui juridique ALPH : alphabétisation fonctionnelle AMP : aire marine protégée CM : carte de mareyeur CNCPM : Conseil National Consultatif des Pêches Maritimes",
+        "Fief de la confrérie layène par excellence, c’est l'un des ports de pêche traditionnels les plus importants du Sénégal",
+        "La pêche et ses activités annexes constituent la base de l'économie locale, l'agriculture et l'élevage arrivant à peine à subvenir aux besoins propres de la ville",
+        "Pour diminuer les coûts des allocations, au lieu des recensements, on procède par approche de sondage, ensuite on fait de l’inférence (extra rès (i) utilité pour la gestion de la ressource (ii) efficacité à bien remplir sa mission (iii) capacité à bien contribuer à une bonne gestion de la ressource",
+        "Plus V est proche ations permettront de formuler des consolidations et d’extension, ces recommandations pour une gestion partagée, entre l’état et les acteurs, des pêcheries"
+      ]
+    },
+    "Anse Bernard": {
+      "nom": "Anse Bernard",
+      "demographie": {
+        "classe_age_modale": "> 65 ans",
+        "migrations_presentes": true,
+        "pourcentages_mentionnes": [
+          "72 %",
+          "100 %",
+          "60 %",
+          "21 %",
+          "53 %",
+          "93 %"
+        ]
+      },
+      "engins": [
+        "FD",
+        "FDF",
+        "FDRR",
+        "FDY",
+        "FMDS",
+        "FME",
+        "LCS",
+        "LSM",
+        "PSM",
+        "casier",
+        "filet",
+        "ligne"
+      ],
+      "initiatives_locales_clean": [
+        "L’ILCP, connue par les 2/3 des acteurs renvoie, selon le cas, à des immersions (IRA et IPP), des interdictions (FMDS, PSM et explosifs) et à l’implantation d’espaces réglementés (i",
+        "L’ILCP, connue par les 2/3 des acteurs renvoie, selon le cas, à des immersions (IRA et IPP), des interdictions (FMDS, PSM et explosifs) et à l’implantation d’espaces réglementés (i",
+        "Ngor et Yoff brillent par la pratique de la mixité, la méconnaissance du CLP et de l’IL pêcheurs pratiquant surtout la mixité voire spécialistes de FDF",
+        "Plus de la moitié (53 %) d’entre eux sont membres du CLP, 4/15 d’une autre OGLP tandis que 93 % connaissent l’ILCP qui consiste en des immersions, au RB, à la surveillance et à la mise en place d’espaces protégés (ZPP, AMP ou « parc »)",
+        "A Guéréo, 3/5 des acteurs adhèrent à une autre OGLP, tous connaissent l’ILCP : des immersions, comme à la S onsiste en des immersions, au RB, à la surveillance et à la mise en place d’espaces protégés (ZPP, AMP ou « parc »)",
+        "A Saly, la connaissance de l’ILCP (interdiction de la pêche des juvéniles + existence",
+        "Programme d'immersion des récifs artificiels pour une gestion durable de la pêche au Sénégal",
+        "Programme d'immersion des récifs artificiels pour une gestion durable de la pêche au Sénégal",
+        "En sus, les avis des techniciens enquêteurs sur les pêcheries de leurs sites d’intervention une autre OGLP",
+        "L’ILCP, connue par les 2/3 des acteurs renvoie, selon le cas, à des immersions (IRA et IPP), des interdictions (FMDS, PSM et explosifs) et à l’implantation d’espaces réglementés (i",
+        "5 Soumbédioune affiche plus d’a tié (53 %) d’entre eux sont membres du CLP, 4/15 d’une autre OGLP tandis que 93 % connaissent l’ILCP qui consiste en des immersions, au RB, à la surveillance et à la mise en place d’espaces protégés (ZPP, AMP ou « parc »)",
+        "Les CLP empêchent es informations relatives au CLP, etc"
+      ],
+      "besoins_clean": [
+        "tivité du secteur des pêches et de l’aquaculture » du Projet de Gestion des Ressources Naturelles au Sénégal (SENRM, P175915)",
+        "La pêche et ses activités annexes constituent la base de l'économie locale, l'agriculture et l'élevage arrivant à peine à subvenir aux besoins propres de la ville",
+        "Soumbédioune Situé sur la ribuer à une bonne gestion de la ressource",
+        "Pour diminuer les coûts des allocations, au lieu des r ribuer à une bonne gestion de la ressource",
+        "Quel que soit le cas, on s’intéresse d’abord aux variables statistiquement interdépendant(e)s sur la base du p-value et du V de Cramer26 : le de cogestion",
+        "L’existence d’une initiative locale de gestion de la pêcherie portée par les CLPA, le niveau d’implication des acteurs et suivant leurs professions ont également une influence sur le besoin de la congestion dans les sites de réplications",
+        "La pêche et ses activités annexes constituent la base de l'économie locale, l'agriculture et l'élevage arrivant à peine à subvenir aux besoins propres de la ville",
+        "Ensuite, il fallait évaluer (ii) leur pertinence et les modalités pratiques de leur extension dans des commun du CLP et les éléments justifiant la nécessité de la création éventuelle d’une structure de cogestion",
+        "Dans les sites de 31 informations permettront de formuler des consolidations et d’extension, ces recommandations pour une gestion partagée, entre l’état et les acteurs, des pêcheries",
+        "Relations avec les pêcheurs des sites voisins Hormis les réponses NSP (46 %), 42 % des acteurs affirment avoir des affinités relationnelles a ation complète par les acteurs",
+        "Ces moyens qui sont de nature à consolider ou faciliter l’extension de l’OGLP et/ou de son ILCP ont plusieurs supports possibles, côté Etat : réactivation-promotion de mesures d’accompagnement (formation, appui juridique, AGR, surveillance et recherche participatives, etc",
+        ") et d’utilisation d’engins de pêche interdits (FMF, senne de pla uche), en voie d’immersion (à droite)"
+      ]
+    },
+    "Terrou Baye Sogui": {
+      "nom": "Terrou Baye Sogui",
+      "demographie": {
+        "classe_age_modale": "> 65 ans",
+        "migrations_presentes": true,
+        "pourcentages_mentionnes": [
+          "72 %",
+          "100 %",
+          "60 %",
+          "21 %",
+          "53 %",
+          "93 %"
+        ]
+      },
+      "engins": [
+        "FD",
+        "FDF",
+        "FDRR",
+        "FDY",
+        "FMDS",
+        "FME",
+        "LCS",
+        "LSM",
+        "PSM",
+        "casier",
+        "filet",
+        "ligne"
+      ],
+      "initiatives_locales_clean": [
+        "L’ILCP, connue par les 2/3 des acteurs renvoie, selon le cas, à des immersions (IRA et IPP), des interdictions (FMDS, PSM et explosifs) et à l’implantation d’espaces réglementés (i",
+        "L’ILCP, connue par les 2/3 des acteurs renvoie, selon le cas, à des immersions (IRA et IPP), des interdictions (FMDS, PSM et explosifs) et à l’implantation d’espaces réglementés (i",
+        "Ngor et Yoff brillent par la pratique de la mixité, la méconnaissance du CLP et de l’IL pêcheurs pratiquant surtout la mixité voire spécialistes de FDF",
+        "Plus de la moitié (53 %) d’entre eux sont membres du CLP, 4/15 d’une autre OGLP tandis que 93 % connaissent l’ILCP qui consiste en des immersions, au RB, à la surveillance et à la mise en place d’espaces protégés (ZPP, AMP ou « parc »)",
+        "A Guéréo, 3/5 des acteurs adhèrent à une autre OGLP, tous connaissent l’ILCP : des immersions, comme à la S onsiste en des immersions, au RB, à la surveillance et à la mise en place d’espaces protégés (ZPP, AMP ou « parc »)",
+        "A Saly, la connaissance de l’ILCP (interdiction de la pêche des juvéniles + existence",
+        "En sus, les avis des techniciens enquêteurs sur les pêcheries de leurs sites d’inter une autre OGLP",
+        "L’ILCP, connue par les 2/3 des acteurs renvoie, selon le cas, à des immersions (IRA et IPP), des interdictions (FMDS, PSM et explosifs) et à l’implantation d’espaces réglementés (i",
+        "5 Soumbédioune affiche plus d’a tié (53 %) d’entre eux sont membres du CLP, 4/15 d’une autre OGLP tandis que 93 % connaissent l’ILCP qui consiste en des immersions, au RB, à la surveillance et à la mise en place d’espaces protégés (ZPP, AMP ou « parc »)",
+        "CONTEXTE DE L’ETUDE Le Projet de Gestion des Ressources Naturelles au Sénégal (SENRM, P175915) implique les ministères de la Pêche et de (49 %)",
+        "L’ILCP, connue par les 2/3 des acteurs renvoie, selon le cas, à des immersions (IRA et IPP), des interdictions (FMDS, PSM et explosifs) et à l’implantation d’espaces réglementés (i",
+        "Ngor et Yoff brillent par la pratique de la mixité, la méconnaissance du CLP et de l’ILCP, l’adhésion à 100 % à une aut taux de pêcheurs, ligneurs pour l’essentiel (LSM ou PAL)"
+      ],
+      "besoins_clean": [
+        "tivité du secteur des pêches et de l’aquaculture » du Projet de Gestion des Ressources Naturelles au Sénégal (SENRM, P175915)",
+        "Pour diminuer les coûts des allocations, au ribuer à une bonne gestion de la ressource",
+        "Quel que soit le cas, on s’intéresse d’abord aux variables statistiquement interdépendant(e)s sur la base du p-value et du V de Cramer26 : le de cogestion",
+        "L’existence d’une initiative locale de gestion de la pêcherie portée par les CLPA, le niveau d’implication des acteurs et suivant leurs professions ont également une influence sur le besoin de la congestion dans les sites de réplications",
+        ") et d’utilisation d’engins de pêche interdits (FMF, senne de pla uche), en voie d’immersion (à droite)",
+        "88 11 LISTE DES ACRONYMES ET DES ABREVIATIONS ABER : Anse Bernard ADMI : administration AGR : activité génératrice de revenus AJ : appui juridique ALPH : alphabétisation fonctionnelle AMP : aire marine protégée CM : carte de mareyeur CNCPM : Conseil National Consultatif des Pêches Maritimes",
+        "Fief de la confrérie layène par excellence, c’est l'un des ports de pêche traditionnels les plus importants du Sénégal",
+        "La pêche et ses activités annexes constituent la base de l'économie locale, l'agriculture et l'élevage arrivant à peine à subvenir aux besoins propres de la ville",
+        "Sites de consolidation et d’extension Les réponses de ces enquêteurs, relativement aux 3 sites de consolidatio té de la non-pêche des bateaux dans leurs zones d’évolution traditionnelle, etc",
+        "Disposer de spécialistes pour la surveillance, assurer la reconversion des acteurs vers d'autres métiers, améliorer la formation multiforme (sur le Code, la gestion des conflits, la GRH, les aspects juridiques, la recherche de partenaires, l’élaboration de projets, la recherche participative, etc",
+        "Ces moyens qui sont de nature à consolider ou faciliter l’extension de l’OGLP et/ou de son ILCP ont plusieurs supports possibles, côté Etat : réactivation-promotion de mesures d’accompagnement (formation, appui juridique, AGR, surveillance et recherche participatives, etc",
+        "Plus de la moitié (53 %) d’entre eux sont membres du CLP, 4/15 d’une autre OGLP tandis que 93 % connaissent l’ILCP qui consiste en des immersions, au RB, à la surveillance et à la mise en place d’espaces protégés (ZPP, AMP ou « parc »)"
+      ]
+    },
+    "Ngaparou": {
+      "nom": "Ngaparou",
+      "demographie": {
+        "classe_age_modale": "> 65 ans",
+        "migrations_presentes": true,
+        "pourcentages_mentionnes": [
+          "72 %",
+          "100 %",
+          "60 %",
+          "21 %",
+          "53 %",
+          "93 %"
+        ]
+      },
+      "engins": [
+        "FD",
+        "FDF",
+        "FDRR",
+        "FDY",
+        "FMDS",
+        "FME",
+        "LCS",
+        "LSM",
+        "PSM",
+        "casier",
+        "chalut",
+        "filet"
+      ],
+      "initiatives_locales_clean": [
+        "L’ILCP, connue par les 2/3 des acteurs renvoie, selon le cas, à des immersions (IRA et IPP), des interdictions (FMDS, PSM et explosifs) et à l’implantation d’espaces réglementés (i",
+        "Ngor et Yoff brillent par la pratique de la mixité, la méconnaissance du CLP et de l’IL pêcheurs pratiquant surtout la mixité voire spécialistes de FDF",
+        "Plus de la moitié (53 %) d’entre eux sont membres du CLP, 4/15 d’une autre OGLP tandis que 93 % connaissent l’ILCP qui consiste en des immersions, au RB, à la surveillance et à la mise en place d’espaces protégés (ZPP, AMP ou « parc »)",
+        "A Guéréo, 3/5 des acteurs adhèrent à une autre OGLP, tous connaissent l’ILCP : des immersions, comme à la S onsiste en des immersions, au RB, à la surveillance et à la mise en place d’espaces protégés (ZPP, AMP ou « parc »)",
+        "CONTEXTE DE L’ETUDE Le Projet de Gestion des Ressources Naturelles au Sénégal êche au Sénégal (GAIPES), ses membres estiment qu’il est temps que le CAPS soit reconnu et dispose de licences de pêche industrielle",
+        "Dans les autres sites, on peut noter en résumé ceci ( de pêche dont la signature relève de l’Etat ; les compétences limitées de l’OGLP, RB souvent violé sans sanction",
+        "La ZPP de Ouakam ne semble pas être extensible à Ngor et à Yoff",
+        "immersion de récifs artificiels (IRA) : vieux bateaux ou véhicules, pots à poulpe, etc",
+        "Programme d'immersion des récifs artificiels pour une gestion durable de la pêche au Sénégal",
+        "in HB : hors-bord (moteur) IFREMER : Institut français d’exploitation de la mer INN : pêche illégale, non déclarée et non réglementée IPP : immersion de pots (« canaris ») à poulpe IRA : immersion de récifs artificiels ISCOS : ONG italienne",
+        "Dans les autres sites, on peut noter en résumé ceci ( de pêche dont la signature relève de l’Etat ; les compétences limitées de l’OGLP, RB souvent violé sans sanction",
+        "Le choix des espèces (économiques) par les pêcheurs , FMF notamment ; - limitation de l'immatriculation des pirogues ; - respect des dimensions des mailles (tout EDP) ; - lutte contre la pollution des sites par les eaux usées dans la mer"
+      ],
+      "besoins_clean": [
+        "tivité du secteur des pêches et de l’aquaculture » du Projet de Gestion des Ressources Naturelles au Sénégal (SENRM, P175915)",
+        "Pour diminuer les coûts des allocations, au ribuer à une bonne gestion de la ressource",
+        "Quel que soit le cas, on s’intéresse d’abord aux variables statistiquement interdépendant(e)s sur la base du p-value et du V de Cramer26 : le de cogestion",
+        "L’existence d’une initiative locale de gestion de la pêcherie portée par les CLPA, le niveau d’implication des acteurs et suivant leurs professions ont également une influence sur le besoin de la congestion dans les sites de réplications",
+        "s de 31 informations permettront de formuler des consolidations et d’extension, ces recommandations pour une gestion partagée, entre l’état et les acteurs, des pêcheries",
+        "Relations avec les pêcheurs des sites voisins Hormis les réponses NSP (46 %), 42 % des acteurs affirment avoir des affinités relationnelles a caractère participatif de telles initiatives est une belle illustration de la démarche de cogestion",
+        "9 (Programme de) Gest e, il visait à promouvoir la cogestion des pêcheries artisanales dans 4 sites pilotes : Ouakam, Ngaparou, Foundiougne et Bétenty",
+        "11 Projet d'Appui à la Gestion des Pêches Artisanales Transfrontalières",
+        "Il s’intéressait, à l’échelle du Sénégal et de la Mauritanie, aux es pêcheurs artisans sénégalais (90 %, globalement) (Mbaye, 2002)",
+        "Hormis les seconds qui ne pratiquent que la pêche, les deux autres groupes peuvent, suivant l’année ou par opportunisme, lui associer l’agriculture ou le transport maritime",
+        "Son économie repose sur la pêche, l'artisanat, le commerce et le tourisme, l'agriculture ne représentant qu'une petite partie des ressources",
+        "Ngaparou dispose d’un CLP comptant environ 600 membres actifs (pêcheurs, mareyeurs, charpentiers et femmes transformatrices) et travaillan n des Aires Marines Communautaires Protégées (DAMCP)"
+      ]
+    },
+    "La Somone": {
+      "nom": "La Somone",
+      "demographie": {
+        "classe_age_modale": "> 65 ans",
+        "migrations_presentes": true,
+        "pourcentages_mentionnes": [
+          "72 %",
+          "100 %",
+          "60 %",
+          "21 %",
+          "53 %",
+          "93 %"
+        ]
+      },
+      "engins": [
+        "FD",
+        "FDF",
+        "FDRR",
+        "FDY",
+        "FMDS",
+        "FME",
+        "LCS",
+        "LSM",
+        "PSM",
+        "casier",
+        "filet",
+        "ligne"
+      ],
+      "initiatives_locales_clean": [
+        "L’ILCP, connue par les 2/3 des acteurs renvoie, selon le cas, à des immersions (IRA et IPP), des interdictions (FMDS, PSM et explosifs) et à l’implantation lis via un questionnaire spécial",
+        "L’ILCP, connue par les 2/3 des acteurs renvoie, selon le cas, à des immersions (IRA et IPP), des interdictions (FMDS, PSM et explosifs) et à l’implantation d’espaces réglementés (i",
+        "Ngor et Yoff brillent par la pratique de la mixité, la méconnaissance du CLP et de l’IL pêcheurs pratiquant surtout la mixité voire spécialistes de FDF",
+        "Plus de la moitié (53 %) d’entre eux sont membres du CLP, 4/15 d’une autre OGLP tandis que 93 % connaissent l’ILCP qui consiste en des immersions, au RB, à la surveillance et à la mise en place d’espaces protégés (ZPP, AMP ou « parc »)",
+        "A Guéréo, 3/5 des acteurs adhèrent à une autre OGLP, tous connaissent l’ILCP : des immersions, comme à la S onsiste en des immersions, au RB, à la surveillance et à la mise en place d’espaces protégés (ZPP, AMP ou « parc »)",
+        "A Saly, la connaissance de l’ILCP (interdiction de la pêche des juvéniles + existence",
+        "L’amélioration de la salubrité des sites, le nettoyage des fonds marins et le respect des dispositions pertinentes du Code de la Pêche (FMF, SP, TMM…), des mesures locales (RB, ZPP, AMP, PNOCT…) et de la zone dévolue à la PA sont des exigences capitales",
+        "Abdoulaye Ndiaye, coordonnateur national du réseau des CLPA du Sénégal et gestionnaire de la Zone de pêche protégée (ZPP) de Ngaparou, témoign n 2005 et celle de la ZPP en 2007 a constitué le début d’une démarche prometteuse",
+        "Abdoulaye Ndiaye, coordonnateur national du réseau des CLPA du Sénégal et gestionnaire de la Zone de pêche protégée (ZPP) de Ngaparou, témoigne: « Huit mois après que cette mesure a été mise en place, de la plage, nous pouvions suivre des yeux les bancs de poissons",
+        "Et il y 53 %) d’entre eux sont membres du CLP, 4/15 d’une autre OGLP tandis que 93 % connaissent l’ILCP qui consiste en des immersions, au RB, à la surveillance et à la mise en place d’espaces protégés (ZPP, AMP ou « parc »)",
+        "L’amélioration de la salubrité des sites, le nettoyage des fonds marins et le respect des dispositions pertinentes du Code de la Pêche (FMF, SP, TMM…), des mesures locales (RB, ZPP, AMP, PNOCT…) et de la zone dévolue à la PA sont des exigences capitales",
+        "L’extension des ILCP, hormis les réponses NSP (46 %) et la différence des pratiques de pêche (Yoff vs Ngor, par ex), reste possibl ure 10"
+      ],
+      "besoins_clean": [
+        "tivité du secteur des pêches et de l’aquaculture » du Projet de Gestion des Ressources Naturelles au Sénégal (SENRM, P175915)",
+        "Son économie repose sur la pêche, l'artisanat, le commerce et le tourisme, l'agriculture ne représentant qu'une petite partie des ressources",
+        "Ngaparou dispose d’un CLP comptant environ 600 membres actifs (pêcheurs, mareyeurs, charpentiers et femmes transformatrices) et travaillan etite Côte (74 m) et promontoire dressé entre Popenguine et Guéréo",
+        "À l'origine, les villages de la commune vivaient de l'agriculture et de la pêche",
+        "Déjà en 194 ns frauduleuses de bateaux (pêche industrielle, PI) avec, à la clé, spoliation de la ressource et pertes de matériels, voire de vies humaines"
+      ]
+    },
+    "Somone": {
+      "nom": "Somone",
+      "demographie": {
+        "classe_age_modale": "> 65 ans",
+        "migrations_presentes": true,
+        "pourcentages_mentionnes": [
+          "72 %",
+          "100 %",
+          "60 %",
+          "21 %",
+          "53 %",
+          "93 %"
+        ]
+      },
+      "engins": [
+        "FD",
+        "FDF",
+        "FDRR",
+        "FDY",
+        "FMDS",
+        "FME",
+        "LCS",
+        "LSM",
+        "PSM",
+        "casier",
+        "filet",
+        "ligne"
+      ],
+      "initiatives_locales_clean": [
+        "L’ILCP, connue par les 2/3 des acteurs renvoie, selon le cas, à des immersions (IRA et IPP), des interdictions (FMDS, PSM et explosifs) et à l’implantation via un questionnaire spécial",
+        "L’ILCP, connue par les 2/3 des acteurs renvoie, selon le cas, à des immersions (IRA et IPP), des interdictions (FMDS, PSM et explosifs) et à l’implantation d’espaces réglementés (i",
+        "Ngor et Yoff brillent par la pratique de la mixité, la méconnaissance du CLP et de l’IL pêcheurs pratiquant surtout la mixité voire spécialistes de FDF",
+        "Plus de la moitié (53 %) d’entre eux sont membres du CLP, 4/15 d’une autre OGLP tandis que 93 % connaissent l’ILCP qui consiste en des immersions, au RB, à la surveillance et à la mise en place d’espaces protégés (ZPP, AMP ou « parc »)",
+        "A Guéréo, 3/5 des acteurs adhèrent à une autre OGLP, tous connaissent l’ILCP : des immersions, comme à la S onsiste en des immersions, au RB, à la surveillance et à la mise en place d’espaces protégés (ZPP, AMP ou « parc »)",
+        "A Saly, la connaissance de l’ILCP (interdiction de la pêche des juvéniles + existence",
+        "32 à Saly le repos biologique à Ngaparou et à Soumbédioune : Serranidés dont le thiof, le poulpe… la surveillance des filets et 3 3 5 11 0 1 27 5 5 65 Pour les ILCP dans les sites initiaux, les résultats montrent un engouement mitigé des acteurs",
+        "La ZPP de Ouakam ne semble pas être extensible à Ngor et à Yoff",
+        ";  RB poulpe ;  mise en place et respect des limites de l'AMP, de la ZPP de Ngaparou ;  interdiction de pêcher dans le naître l’initiative locale de cogestion principale (ILCP) du site, tandis que les réponses « ne sait pas » (NSP) sont les seules notées à Ngor et Yoff",
+        "Dans cette lancée, où d’autres initiatives étatiques ou non (APNEOS, OCEANIUM…) ont été notées, les pêcheurs de poulpe de la Petite Côte se sont également lancés dans une opération d’immersion de 5 000 à 20 000 pots à poulpe (« canaris », en argile) 87 ( n de l’ILCP locale (g",
+        "La ZPP de Ouakam ne semble pas être extensible à Ngor et à Yoff",
+        "L’amélioration de la salubrité des sites, le nettoyage des fonds marins et le respect des dispositions pertinentes du Code de la Pêche (FMF, SP, TMM…), des mesures locales (RB, ZPP, AMP, PNOCT…) et de la zone dévolue à la PA sont des exigences capitales"
+      ],
+      "besoins_clean": [
+        "tivité du secteur des pêches et de l’aquaculture » du Projet de Gestion des Ressources Naturelles au Sénégal (SENRM, P175915)",
+        "Pour diminuer les coûts des allocations ribuer à une bonne gestion de la ressource",
+        "Une APAC a besoin d'une communauté et d'une zone de ressources bien définies, les deux étant liées par de fortes relations",
+        "Ensuite, la communauté doit avoir le pouvoir de gérer ces ressources et ses décisions de gest le de cogestion",
+        "L’existence d’une initiative locale de gestion de la pêcherie portée par les CLPA, le niveau d’implication des acteurs et suivant leurs professions ont également une influence sur le besoin de la congestion dans les sites de réplications",
+        ") et d’utilisation d’engins de pêche interdits (FMF, senne de pla uche), en voie d’immersion (à droite)",
+        "Son économie repose sur la pêche, l'artisanat, le commerce et le tourisme, l'agriculture ne représentant qu'une petite partie des ressources",
+        "Ngaparou dispose d’un CLP comptant environ 600 membres actifs (pêcheurs, mareyeurs, charpentiers et femmes transformatrices) et travaillan etite Côte (74 m) et promontoire dressé entre Popenguine et Guéréo",
+        "À l'origine, les villages de la commune vivaient de l'agriculture et de la pêche",
+        "Déjà en 194 frauduleuses de bateaux (pêche industrielle, PI) avec, à la clé, spoliation de la ressource et pertes de matériels, voire de vies humaines",
+        "Le non-partage de sites de pêche s’explique surtout par la méconnaissance et le métier qui ne pousse pas à la mobilité, à l’image de la transformation artisanale",
+        "Certains sites sont détaillés, comme par exemple té de la non-pêche des bateaux dans leurs zones d’évolution traditionnelle, etc"
+      ]
+    },
+    "Ndayane": {
+      "nom": "Ndayane",
+      "demographie": {
+        "classe_age_modale": "> 65 ans",
+        "migrations_presentes": true,
+        "pourcentages_mentionnes": [
+          "72 %",
+          "100 %",
+          "60 %",
+          "21 %",
+          "53 %",
+          "93 %"
+        ]
+      },
+      "engins": [
+        "FD",
+        "FDF",
+        "FDRR",
+        "FDY",
+        "FMDS",
+        "FME",
+        "LCS",
+        "LSM",
+        "PSM",
+        "casier",
+        "filet",
+        "ligne"
+      ],
+      "initiatives_locales_clean": [
+        "L’ILCP, connue par les 2/3 des acteurs renvoie, selon le cas, à des immersions (IRA et IPP), des interdictions (FMDS, PSM et explosifs) et à l naire spécial",
+        "L’ILCP, connue par les 2/3 des acteurs renvoie, selon le cas, à des immersions (IRA et IPP), des interdictions (FMDS, PSM et explosifs) et à l’implantation d’espaces réglementés (i",
+        "Ngor et Yoff brillent par la pratique de la mixité, la méconnaissance du CLP et de l’IL pêcheurs pratiquant surtout la mixité voire spécialistes de FDF",
+        "Plus de la moitié (53 %) d’entre eux sont membres du CLP, 4/15 d’une autre OGLP tandis que 93 % connaissent l’ILCP qui consiste en des immersions, au RB, à la surveillance et à la mise en place d’espaces protégés (ZPP, AMP ou « parc »)",
+        "A Guéréo, 3/5 des acteurs adhèrent à une autre OGLP, tous connaissent l’ILCP : des immersions, comme à la S onsiste en des immersions, au RB, à la surveillance et à la mise en place d’espaces protégés (ZPP, AMP ou « parc »)",
+        "A Saly, la connaissance de l’ILCP (interdiction de la pêche des juvéniles + existence de la zone dévolue à la PA sont des exigences capital nt quasiment tous le CLP dont 72 % sont membres et/ou d’une autre OGLP",
+        "L’ILCP, connue par les 2/3 des acteurs renvoie, selon le cas, à des immersions (IRA et IPP), des interdictions (FMDS, PSM et explosifs) et à l’implantation d’espaces réglementés (i",
+        "Principal bailleur : Coopération Italienne (MAE-DGCS), IUCN: International Union for Conservation of Nature JICA : Agen êche au Sénégal (GAIPES), ses membres estiment qu’il est temps que le CAPS soit reconnu et dispose de licences de pêche industrielle",
+        "La ZPP de Ouakam ne semble pas être extensible à Ngor et à Yoff",
+        "Le s n d’une Zone de Pêche protégée (ZPP)",
+        "Le si n d’une Zone de Pêche protégée (ZPP)",
+        "La ZPP de Ouakam ne semble pas être extensible à Ngor et à Yoff"
+      ],
+      "besoins_clean": [
+        "tivité du secteur des pêches et de l’aquaculture » du Projet de Gestion des Ressources Naturelles au Sénégal (SENRM, P175915)",
+        "Ouakam regorge d’acteurs séniors (> 65 ans), au cursus coranique, spécialisés (fileyeurs, ligneurs ou plongeurs), connaissant quasiment to ribuer à une bonne gestion de la ressource",
+        "Quel que soit le cas, on s’intéresse d’abord aux variables statistiquement interdépendant(e)s sur la base inuer les coûts des alloca ribuer à une bonne gestion de la ressource",
+        "Ensuite, il fallait évaluer (ii) leur pertinence et les modalités pratiques de leur extension dans des commu tivité du secteur des pêches et de l’aquaculture » du Projet de Gestion des Ressources Naturelles au Sénégal (SENRM, P175915)",
+        "Ensuite, il fallait évaluer (ii) leur pertinence et les modalités pratiques de leur extension dans des commun du CLP et les éléments justifiant la nécessité de la création éventuelle d’une structure de cogestion",
+        "Dans les sites de 31 informations permettront de formuler des consolidations et d’extension, ces recommandations pour une gestion partagée, entre l’état et les acteurs, des pêcheries",
+        "Relations avec les pêcheurs des sites voisins Hormis les réponses NSP (46 %), 42 % des acteurs affirment avoir des affinités relationnelles a ation complète par les acteurs",
+        "Ces moyens qui sont de nature à consolider ou faciliter l’extension de l’OGLP et/ou de son ILCP ont plusieurs supports possibles, côté Etat : réactivation-promotion de mesures d’accompagnement (formation, appui juridique, AGR, surveillance et recherche participatives, etc",
+        "Son économie repose sur la pêche, l'artisanat, le commerce et le tourisme, l'agriculture ne représentant qu'une petite partie des ressources",
+        "Ngaparou dispose d’un CLP comptant environ 600 membres actifs (pêcheurs, mareyeurs, charpentiers et femmes transformatrices) et travaillan etite Côte (74 m) et promontoire dressé entre Popenguine et Guéréo",
+        "À l'origine, les villages de la commune vivaient de l'agriculture et de la pêche",
+        "A terme, il est apparu nécessaire, entre autres recommandations fortes, de mettre en place, renforcer ou rendre plus efficientes des activités génératrices de revenus (AGR) en vue d’une bonne mise en œuvre 113 de l'initiative locale de cogestion (ILC) propre à chaque site"
+      ]
+    },
+    "Saly": {
+      "nom": "Saly",
+      "demographie": {
+        "classe_age_modale": "> 65 ans",
+        "migrations_presentes": true,
+        "pourcentages_mentionnes": [
+          "72 %",
+          "100 %",
+          "60 %",
+          "21 %",
+          "53 %",
+          "93 %"
+        ]
+      },
+      "engins": [
+        "FD",
+        "FDF",
+        "FDRR",
+        "FDY",
+        "FMDS",
+        "FME",
+        "LCS",
+        "LSM",
+        "PSM",
+        "casier",
+        "filet",
+        "ligne"
+      ],
+      "initiatives_locales_clean": [
+        "L’ILCP, connue par les 2/3 des acteurs renvoie, selon le cas, à des immersions (IRA et IPP), des interdictions (FMDS, PSM et questionnaire spécial",
+        "L’ILCP, connue par les 2/3 des acteurs renvoie, selon le cas, à des immersions (IRA et IPP), des interdictions (FMDS, PSM et explosifs) et à l’implantation d’espaces réglementés (i",
+        "Ngor et Yoff brillent par la pratique de la mixité, la méconnaissance du CLP et de l’IL pêcheurs pratiquant surtout la mixité voire spécialistes de FDF",
+        "Plus de la moitié (53 %) d’entre eux sont membres du CLP, 4/15 d’une autre OGLP tandis que 93 % connaissent l’ILCP qui consiste en des immersions, au RB, à la surveillance et à la mise en place d’espaces protégés (ZPP, AMP ou « parc »)",
+        "A Guéréo, 3/5 des acteurs adhèrent à une autre OGLP, tous connaissent l’ILCP : des immersions, comme à la S onsiste en des immersions, au RB, à la surveillance et à la mise en place d’espaces protégés (ZPP, AMP ou « parc »)",
+        "A Saly, la connaissance de l’ILCP (interdiction de la pêche des juvéniles + existence êche au Sénégal (GAIPES), ses membres estiment qu’il est temps que le CAPS soit reconnu et dispose de licences de pêche industrielle",
+        "immersion de récifs artificiels (IRA) : vieux bateaux ou véhicules, pots à poulpe, etc",
+        "Le choix des espèces (économiques) par les pêcheurs , FMF notamment ; - limitation de l'immatriculation des pirogues ; - respect des dimensions des mailles (tout EDP) ; - lutte contre la pollution des sites par les eaux usées dans la mer",
+        "immersion de récifs artificiels (IRA) : vieux bateaux ou véhicules, pots à poulpe, etc",
+        "; Les choix ci-dessus, isolés ou combinés selon la proposition individuelle de l’acteur, sont essentiellement justifiés comme suit iative locale de cogestion principale (ILCP) du site, tandis que les réponses « ne sait pas » (NSP) sont les seules notées à Ngor et Yoff",
+        "L’ILCP, connue par les 2/3 des acteurs renvoie, selon le cas, à des immersions (IRA et IPP), des interdictions (FMDS, PSM et explosifs) et à l’implantation d’espaces réglementés (i",
+        "5 Soumbédioune affiche plus d’a tié (53 %) d’entre eux sont membres du CLP, 4/15 d’une autre OGLP tandis que 93 % connaissent l’ILCP qui consiste en des immersions, au RB, à la surveillance et à la mise en place d’espaces protégés (ZPP, AMP ou « parc »)"
+      ],
+      "besoins_clean": [
+        "tivité du secteur des pêches et de l’aquaculture » du Projet de Gestion des Ressources Naturelles au Sénégal (SENRM, P175915)",
+        "Ouakam regorge d’acteurs séniors (> 65 ans), au cursus coranique, spécialisés (fileyeurs, ligneurs ou plongeurs), connaissant quasiment to ribuer à une bonne gestion de la ressource",
+        "Pour diminuer les coûts des alloc ribuer à une bonne gestion de la ressource",
+        "Quel que soit le cas, on s’intéresse d’abord aux variables statistiquement interdépendant(e)s sur la base du p-value et du V de Cramer26 : le de cogestion",
+        "L’existence d’une initiative locale de gestion de la pêcherie portée par les CLPA, le niveau d’implication des acteurs et suivant leurs professions ont également une influence sur le besoin de la congestion dans les sites de réplications",
+        ") et d’utilisation d’engins de pêche interdits (FMF, senne de pla pêcheurs artisans sénégalais (90 %, globalement) (Mbaye, 2002)",
+        "Hormis les seconds qui ne pratiquent que la pêche, les deux autres groupes peuvent, suivant l’année ou par opportunisme, lui associer l’agriculture ou le transport maritime",
+        "Son économie repose sur la pêche, l'artisanat, le commerce et le tourisme, l'agriculture ne représentant qu'une petite partie des ressources",
+        "Ngaparou dispose d’un CLP comptant environ 600 membres actifs (pêcheurs, mareyeurs, charpentiers et femmes transformatrices) et travaillan etite Côte (74 m) et promontoire dressé entre Popenguine et Guéréo",
+        "À l'origine, les villages de la commune vivaient de l'agriculture et de la pêche",
+        "A terme, il est apparu nécessaire, entre autres recommandations fortes, de mettre en place, renforcer ou rendre plus efficientes des activités génératrices de revenus (AGR) en vue d’une bonne mise en œuvre 113 de l'initiative locale de cogestion (ILC) propre à chaque site",
+        "A cette fin, le projet SENRM, à travers le présent avis d’appel à manifestation d’intérêt, envisa vre 113 de l'initiative locale de cogestion (ILC) propre à chaque site"
+      ]
+    },
+    "Guéréo": {
+      "nom": "Guéréo",
+      "demographie": {
+        "classe_age_modale": "> 65 ans",
+        "migrations_presentes": true,
+        "pourcentages_mentionnes": [
+          "72 %",
+          "100 %",
+          "60 %",
+          "21 %",
+          "53 %",
+          "93 %"
+        ]
+      },
+      "engins": [
+        "FD",
+        "FDF",
+        "FDRR",
+        "FDY",
+        "FMDS",
+        "FME",
+        "LCS",
+        "LSM",
+        "PSM",
+        "casier",
+        "filet",
+        "ligne"
+      ],
+      "initiatives_locales_clean": [
+        "L’ILCP, connue par les 2/3 des acteurs renvoie, selon le cas, à des immersions (IRA et IPP), des interdictions (FMDS, PSM et explosif recueillis via un questionnaire spécial",
+        "L’ILCP, connue par les 2/3 des acteurs renvoie, selon le cas, à des immersions (IRA et IPP), des interdictions (FMDS, PSM et explosifs) et à l’implantation d’espaces réglementés (i",
+        "Ngor et Yoff brillent par la pratique de la mixité, la méconnaissance du CLP et de l’IL pêcheurs pratiquant surtout la mixité voire spécialistes de FDF",
+        "Plus de la moitié (53 %) d’entre eux sont membres du CLP, 4/15 d’une autre OGLP tandis que 93 % connaissent l’ILCP qui consiste en des immersions, au RB, à la surveillance et à la mise en place d’espaces protégés (ZPP, AMP ou « parc »)",
+        "A Guéréo, 3/5 des acteurs adhèrent à une autre OGLP, tous connaissent l’ILCP : des immersions, comme à la S onsiste en des immersions, au RB, à la surveillance et à la mise en place d’espaces protégés (ZPP, AMP ou « parc »)",
+        "Principal bailleur : Coopération Italienne (MAE-DGCS), IUCN: International Union for Conservation of Nature JICA : Agen êche au Sénégal (GAIPES), ses membres estiment qu’il est temps que le CAPS soit reconnu et dispose de licences de pêche industrielle",
+        "La ZPP de Ouakam ne semble pas être extensible à Ngor et à Yoff",
+        "Le choix des espèces (économiques) par les pêcheurs iative locale de cogestion principale (ILCP) du site, tandis que les réponses « ne sait pas » (NSP) sont les seules notées à Ngor et Yoff",
+        "La ZPP de Ouakam ne semble pas être extensible à Ngor et à Yoff",
+        "L’amélioration de la salubrité des sites, le nettoyage des fonds marins et le respect des dispositions pertinentes du Code de la Pêche (FMF, SP, TMM…), des mesures locales (RB, ZPP, AMP, PNOCT…) et de la zone dévolue à la PA sont des exigences capitales",
+        "L’extension des ILCP, hormis les réponses NSP (46 %) et la différence des pratiques de pêche (Yoff vs Ngor, par ex), reste po (49 %)",
+        "La ZPP de Ouakam ne semble pas être extensible à Ngor et à Yoff"
+      ],
+      "besoins_clean": [
+        "tivité du secteur des pêches et de l’aquaculture » du Projet de Gestion des Ressources Naturelles au Sénégal (SENRM, P175915)",
+        "Ouakam regorge d’acteurs séniors (> 65 ans), au cursus coranique, spécialisés (fileyeurs, ligneurs ou plongeurs), connaissant quasiment to ribuer à une bonne gestion de la ressource",
+        "Pour diminuer les coûts des allocat ribuer à une bonne gestion de la ressource",
+        "Quel que soit le cas, on s’intéresse d’abord aux variables statistiquement interdépendant(e)s sur la base du p-value et du V de Cramer26 : le de cogestion",
+        "L’existence d’une initiative locale de gestion de la pêcherie portée par les CLPA, le niveau d’implication des acteurs et suivant leurs professions ont également une influence sur le besoin de la congestion dans les sites de réplications",
+        "Son économie repose sur la pêche, l'artisanat, le commerce et le tourisme, l'agriculture ne représentant qu'une petite partie des ressources",
+        "Ngaparou dispose d’un CLP comptant environ 600 membres actifs (pêcheurs, mareyeurs, charpentiers et femmes transformatrices) et travaillan etite Côte (74 m) et promontoire dressé entre Popenguine et Guéréo",
+        "À l'origine, les villages de la commune vivaient de l'agriculture et de la pêche",
+        "A terme, il est apparu nécessaire, entre autres recommandations fortes, de mettre en place, renforcer ou rendre plus efficientes des activités génératrices de revenus (AGR) en vue d’une bonne mise en œuvre 113 de l'initiative locale de cogestion (ILC) propre à chaque site",
+        "A cette fin, le projet SENRM, à travers le présent avis d’appel à manifestation d’intérêt, envisa vre 113 de l'initiative locale de cogestion (ILC) propre à chaque site",
+        "Une AGR consiste en la fourniture de services et/ou de biens par les acteurs, de la pêche ici",
+        "Outre le renforcement de l’ILC en tout site d’exercice (de consolidation et/ou d’extension), elle devrait être r ctionnement de l’organisation locale de gestion de la pêche, voire aussi les conditions de vie des acteurs"
+      ]
+    },
+    "Mbour": {
+      "nom": "Mbour",
+      "demographie": {
+        "classe_age_modale": "> 65 ans",
+        "migrations_presentes": true,
+        "pourcentages_mentionnes": [
+          "72 %",
+          "100 %",
+          "60 %",
+          "46 %",
+          "71 %",
+          "58 %"
+        ]
+      },
+      "engins": [
+        "FD",
+        "FDF",
+        "FDRR",
+        "FDY",
+        "FMDS",
+        "FME",
+        "LCS",
+        "LSM",
+        "PSM",
+        "casier",
+        "filet",
+        "ligne"
+      ],
+      "initiatives_locales_clean": [
+        "L’ILCP, connue par les 2/3 des acteurs renvoie, selon le cas, à des immersions (IRA et IPP), des interdictions (FMDS, PSM et explosifs) et à l’implantation d’espaces réglementés (i",
+        "immersion de récifs artificiels (IRA) : vieux bateaux ou véhicules, pots à poulpe, etc",
+        "immersion de récifs artificiels (IRA) : vieux bateaux ou véhicules, pots à poulpe, etc",
+        "; Les choix ci-dessus, isolés ou combinés selon la proposition individuelle de l’acteur, sont essentiellement justifiés c naître l’initiative locale de cogestion principale (ILCP) du site, tandis que les réponses « ne sait pas » (NSP) sont les seules notées à Ngor et Yoff",
+        "Dans cette lancée, où d’autres initiatives étatiques ou non (APNEOS, OCEANIUM…) ont été notées, les pêcheurs de poulpe de la Petite Côte se sont également lancés dans une opération d’immersion de 5 000 à 20 000 pots à poulpe (« canaris », en argile) 87 ( eure ou égale à 18 cm",
+        "Le choix des espèces (économiques) par les pêcheurs , FMF notamment ; - limitation de l'immatriculation des pirogues ; - respect des dimensions des mailles (tout EDP) ; - lutte contre la pollution des sites par les eaux usées dans la mer",
+        "immersion de récifs artificiels (IRA) : vieux bateaux ou véhicules, pots à poulpe, etc",
+        "immersion de récifs artificiels (IRA) : vieux bateaux ou véhicules, pots à poulpe, etc",
+        "; Les choix ci-dessus, isolés ou combinés selon la proposition individuelle de l’acteur, sont essentiellement justifiés comme suit iative locale de cogestion principale (ILCP) du site, tandis que les réponses « ne sait pas » (NSP) sont les seules notées à Ngor et Yoff",
+        "iative locale de cogestion principale (ILCP) du site, tandis que les réponses « ne sait pas » (NSP) sont les seules notées à Ngor et Yoff",
+        "Fort de cela, l n d’une Zone de Pêche protégée (ZPP)",
+        "C’est surtout un regroupement de pêcheurs, qui n’a jamais aidé de manière palpable les acteurs ; jadis efficient, le CLP n’existe plus que de nom"
+      ],
+      "besoins_clean": [
+        "tivité du secteur des pêches et de l’aquaculture » du Projet de Gestion des Ressources Naturelles au Sénégal (SENRM, P175915)",
+        "Une APAC a besoin d'une communauté et d'une zone de ressources bien définies, les deux étant liées par de fortes relations",
+        "Ensuite, la communauté doit avoir le pouvoir de gérer ces ressources et ses décisions de gest",
+        "Le FAF constitue une ressource substantielle pour pérenniser les CLPA",
+        "En effet, bien que des efforts importants aient été réalisés pour mobiliser des ressources additionnelles, les CLPA ont encore besoin d’un appui financier de la part de l’Etat du Sénégal",
+        "L’existence d’une initiative locale de gestion de la pêcherie portée par les CLPA, le niveau d’implication des acteurs et suivant leurs professions ont également une influence sur le besoin de la congestion dans les sites de réplications",
+        "Ensuite, il fallait évaluer (ii) leur pertinence et les modalités pratiques de leur extension dans des commun du CLP et les éléments justifiant la nécessité de la création éventuelle d’une structure de cogestion",
+        "Dans les sites de 31 informations permettront de formuler des consolidations et d’extension, ces recommandations pour une gestion partagée, entre l’état et les acteurs, des pêcheries",
+        "Relations avec les pêcheurs des sites voisins Hormis les réponses NSP (46 %), 42 % des acteurs affirment avoir des affinités relationnelles a forte de tout cela pourrait mieux faire accepter et appliquer ses décisions, notamment en matière de gestion des ressources halieutiques",
+        "Elles peuvent être résumées comme suit : - Mise en œuvre d’une bonne formation, d’un renforcement des capacités adéquat en GRH, cogestion, g ation complète par les acteurs",
+        "Ces moyens qui sont de nature à consolider ou faciliter l’extension de l’OGLP et/ou de son ILCP ont plusieurs supports possibles, côté Etat : réactivation-promotion de mesures d’accompagnement (formation, appui juridique, AGR, surveillance et recherche participatives, etc",
+        "Sampling Méthodes : Exercices and Solution"
+      ]
+    },
+    "Fass-Boye": {
+      "nom": "Fass-Boye",
+      "demographie": {
+        "classe_age_modale": "> 65 ans",
+        "migrations_presentes": true,
+        "pourcentages_mentionnes": [
+          "72 %",
+          "100 %",
+          "60 %",
+          "46 %",
+          "71 %",
+          "58 %"
+        ]
+      },
+      "engins": [
+        "FD",
+        "FDF",
+        "FDRR",
+        "FDY",
+        "FMDS",
+        "FME",
+        "LCS",
+        "LSM",
+        "PSM",
+        "casier",
+        "filet",
+        "ligne"
+      ],
+      "initiatives_locales_clean": [
+        "L’ILCP, connue par les 2/3 des acteurs renvoie, selon le cas, à des immersions (IRA et IPP), des interdictions (FMDS, PSM et explosifs) et à l’implantation d’espaces réglementés (i",
+        "Le choix des espèces (économiques) par les pêcheurs iative locale de cogestion principale (ILCP) du site, tandis que les réponses « ne sait pas » (NSP) sont les seules notées à Ngor et Yoff",
+        "CONTEXTE DE L’ETUDE Le Projet de Gestion des Ressources Naturelles au Sénégal (SENRM, P1 iative locale de cogestion principale (ILCP) du site, tandis que les réponses « ne sait pas » (NSP) sont les seules notées à Ngor et Yoff",
+        "C’est surtout un regroupement de pêcheurs, qui n’a jamais aidé de manière palpable les acteurs ; jadis efficient, le CLP n’existe plus que de nom",
+        "L’ILCP, connue par les 2/3 des acteurs renvoie, selon le cas, à des immersions (IRA et IPP), des interdictions (FMDS, PSM et explosifs) et à l’implantation d’espaces réglementés (i",
+        "L’amélioration de la salubrité des sites, le nettoyage des fonds marins et le respect des dispositions pertinentes du Code de la Pêche (FMF, SP, TMM…), des mesures locales (RB, ZPP, AMP, PNOCT…) et de la zone dévolue à la PA sont des exigences capitales",
+        "L’extension, malgré quelques obstacles (excès de NSP, pratiques de pêche différentes…) reste possible",
+        "L’amélioration de la salubrité des sites, le nettoyage des fonds marins et le respect des dispositions pertinentes du Code de la Pêche (FMF, SP, TMM…), des mesures locales (RB, ZPP, AMP, PNOCT…) et de la zone dévolue à la PA sont des exigences capitales",
+        "L’extension des ILCP, hormis les réponses NSP (46 %) et la différence des pratiques de pêche (Yoff vs Ngor, par ex), reste possibl ure 10",
+        "Pendant 7 mois, les survivants y ont occupé un camp qu’on leur avait aménagé",
+        "Selon le Dr Grazia Borrini-Feyerabend, une APAC est bien différente des AMP de l'État, imposées souvent contre la volonté et les intérêts des pêcheurs locaux, d'où des conflits et leur non-respect général",
+        "Une APAC vient donc d’une initiative de base, tandis qu’une AMP est la résultante d’intérêts plus globaux"
+      ],
+      "besoins_clean": [
+        "tivité du secteur des pêches et de l’aquaculture » du Projet de Gestion des Ressources Naturelles au Sénégal (SENRM, P175915)",
+        "Une APAC a besoin d'une communauté et d'une zone de ressources bien définies, les deux étant liées par de fortes relations",
+        "Ensuite, la communauté doit avoir le pouvoir de gérer ces ressources et ses décisions de gest u un des date arrêté p ation fabriquent des aires protégées selon leurs points de vue après un semblant de concertation, mais sans vrai engagement de la part des communautés locales",
+        "Une APAC a besoin d'une communauté et d'une zone de ressources bien définies, les deux étant liées par de fortes relations",
+        "L’existence d’une initiative locale de gestion de la pêcherie portée par les CLPA, le niveau d’implication des acteurs et suivant leurs professions ont également une influence sur le besoin de la congestion dans les sites de réplications",
+        "à même de structurer et organiser les pêcheurs ; - sous la forme d’un grand regroupement des acteurs inter-GIE ; - OGLP qui réorganise les pêcheurs",
+        "Ensuite, il fallait évaluer (ii) leur pertinence et les modalités pratiques de leur extension dans des commun du CLP et les éléments justifiant la nécessité de la création éventuelle d’une structure de cogestion",
+        "Dans les sites de 31 informations permettront de formuler des consolidations et d’extension, ces recommandations pour une gestion partagée, entre l’état et les acteurs, des pêcheries",
+        "Questionnaire en zone de réplication Il renvoie aux enquêtes effectuées dans les 4 forte de tout cela pourrait mieux faire accepter et appliquer ses décisions, notamment en matière de gestion des ressources halieutiques",
+        "Elles peuvent être résumées comme suit : - Mise en œuvre d’une bonne formation, d’un renforcement des capacités adéquat en GRH, cogestion, g ation complète par les acteurs",
+        "Ces moyens qui sont de nature à consolider ou faciliter l’extension de l’OGLP et/ou de son ILCP ont plusieurs supports possibles, côté Etat : réactivation-promotion de mesures d’accompagnement (formation, appui juridique, AGR, surveillance et recherche participatives, etc",
+        "Sampling Méthodes : Exercices and Solution"
+      ]
+    },
+    "Cap Skirring": {
+      "nom": "Cap Skirring",
+      "demographie": {
+        "classe_age_modale": "> 65 ans",
+        "migrations_presentes": true,
+        "pourcentages_mentionnes": [
+          "72 %",
+          "100 %",
+          "60 %",
+          "71 %",
+          "58 %",
+          "44 %"
+        ]
+      },
+      "engins": [
+        "FD",
+        "FDF",
+        "FDRR",
+        "FDY",
+        "FMDS",
+        "FME",
+        "LCS",
+        "LSM",
+        "PSM",
+        "casier",
+        "filet",
+        "ligne"
+      ],
+      "initiatives_locales_clean": [
+        "L’ILCP, connue par les 2/3 des acteurs renvoie, selon le cas, à des immersions (IRA et IPP), des interdictions (FMDS, PSM et explosifs) et à l’implantation d’espaces réglementés (i",
+        "Programme d'immersion des récifs artificiels pour une gestion durable de la pêche au Sénégal",
+        "Le choix des espèces (économiques) par les pêcheurs our et de Saint-Louis sont les étrangers (allochtones) les plus fréquents au Cap Skirring",
+        "La même remarque est valable 3 3 29 35 54 STATU-DOMNon réponseAutochtone (AUTO)Migrant saiso les mêmes récifs mais pas les mêmes zones de pêche) (d) l’ILCP de Soumbédioune (RB du thiof) doit faire l’objet d’appropriation par les acteurs dudit site d’abord",
+        "Le choix des espèces (économiques) par les pêcheurs iative locale de cogestion principale (ILCP) du site, tandis que les réponses « ne sait pas » (NSP) sont les seules notées à Ngor et Yoff",
+        "Programme d'immersion des récifs artificiels pour une gestion durable de la pêche au Sénégal",
+        "CONTEXTE DE L’ETUDE Le Projet de Gestion des Ressources Naturelles au Sénégal (SENRM, P1 iative locale de cogestion principale (ILCP) du site, tandis que les réponses « ne sait pas » (NSP) sont les seules notées à Ngor et Yoff",
+        "Programme d'immersion des récifs artificiels pour une gestion durable de la pêche au Sénégal",
+        "C’est surtout un regroupement de pêcheurs, qui n’a jamais aidé de manière palpable les acteurs ; jadis efficient, le CLP n’existe plus que de nom",
+        "62 Relativement à l’efficacité du CLP, il (5), PRAO, Service des Pêches, SIRN",
+        "L’immersion des pots à poulpe est mentionnée dans ce seul site  à Cap Skirring, outre les sorties de pêche alternée (3), le RB, la surveillance, les espaces protégés (ex AMP), le renforcement des capacités (formation) e = 3,81 Ecart-type = 1,20IGLOC-3-EFFINon réponse1234NCTOTAL OBS",
+        "Les giques (1) - Conventions locales (1) - pects sanitaires (salubrité des lieux) - Communication – sensibilisation : 1 - Application des conventions locales : - Pêche industrielle : 1 Immersion de pots à poulpe : 4 5"
+      ],
+      "besoins_clean": [
+        "tivité du secteur des pêches et de l’aquaculture » du Projet de Gestion des Ressources Naturelles au Sénégal (SENRM, P175915)",
+        "Une APAC a besoin d'une communauté et d'une zone de ressources bien définies, les deux étant liées par de fortes relations",
+        "L’existence d’une initiative locale de gestion de la pêcherie portée par les CLPA, le niveau d’implication des acteurs et suivant leurs professions ont également une influence sur le besoin de la congestion dans les sites de réplications",
+        "tivité du secteur des pêches et de l’aquaculture » du Projet de Gestion des Ressources Naturelles au Sénégal (SENRM, P175915)",
+        "Elle vise, avant tout, à établir un diagnostic détaillé puis évaluer les besoins additionnels qui permettent de consolider et d’assurer une durabilité des initiatives de gestion communautaire et de cogestion des pêcheries artisanales (IGC-Co-PA) à Ngaparou, Ouakam et Soumbédioune",
+        "Ensuite, il fallait évaluer (ii) leur pertinence et les modalités pratiques de leur extension dans des commun du CLP et les éléments justifiant la nécessité de la création éventuelle d’une structure de cogestion",
+        "Dans les sites de 31 informations permettront de formuler des consolidations et d’extension, ces recommandations pour une gestion partagée, entre l’état et les acteurs, des pêcheries",
+        "Questionnaire en zone de réplication Il renvoie aux enquêtes effectuées dans les 4 forte de tout cela pourrait mieux faire accepter et appliquer ses décisions, notamment en matière de gestion des ressources halieutiques",
+        "Elles peuvent être résumées comme suit : - Mise en œuvre d’une bonne formation, d’un renforcement des capacités adéquat en GRH, cogestion, g ation complète par les acteurs",
+        "Ces moyens qui sont de nature à consolider ou faciliter l’extension de l’OGLP et/ou de son ILCP ont plusieurs supports possibles, côté Etat : réactivation-promotion de mesures d’accompagnement (formation, appui juridique, AGR, surveillance et recherche participatives, etc",
+        "Sampling Méthodes : Exercices and Solution",
+        "Institut de Statistique, Université de son ILCP ont plusieurs supports possibles, côté Etat : réactivation-promotion de mesures d’accompagnement (formation, appui juridique, AGR, surveillance et recherche participatives, etc"
+      ]
+    },
+    "Kafountine": {
+      "nom": "Kafountine",
+      "demographie": {
+        "classe_age_modale": "> 65 ans",
+        "migrations_presentes": true,
+        "pourcentages_mentionnes": [
+          "72 %",
+          "100 %",
+          "60 %",
+          "71 %",
+          "58 %",
+          "44 %"
+        ]
+      },
+      "engins": [
+        "FD",
+        "FDF",
+        "FDRR",
+        "FDY",
+        "FMDS",
+        "FME",
+        "LCS",
+        "LSM",
+        "PSM",
+        "casier",
+        "filet",
+        "ligne"
+      ],
+      "initiatives_locales_clean": [
+        "L’ILCP, connue par les 2/3 des acteurs renvoie, selon le cas, à des immersions (IRA et IPP), des interdictions (FMDS, PSM et explosifs) et à l’implantation d’espaces réglementés (i",
+        "immersion de récifs artificiels (IRA) : vieux bateaux ou véhicules, pots à poulpe, etc",
+        "Cette ILCP est diversement appelée à Ouakam : - immersion de récifs artificiels-pots (IRA-IPP) 84 - - - - interdiction de la pêche au FMDS interdiction de la PSM inte ificatif sur la nécessité de création d’une nouvelle structure locale de cogestion",
+        "naître l’initiative locale de cogestion principale (ILCP) du site, tandis que les réponses « ne sait pas » (NSP) sont les seules notées à Ngor et Yoff",
+        "Le choix des espèces (économiques) par les pêcheurs , FMF notamment ; - limitation de l'immatriculation des pirogues ; - respect des dimensions des mailles (tout EDP) ; - lutte contre la pollution des sites par les eaux usées dans la mer",
+        "immersion de récifs artificiels (IRA) : vieux bateaux ou véhicules, pots à poulpe, etc",
+        "; Les choix ci-dessus, isolés ou combinés selon la proposition individuelle de l’acteur, sont essentiellement justifiés comme suit iative locale de cogestion principale (ILCP) du site, tandis que les réponses « ne sait pas » (NSP) sont les seules notées à Ngor et Yoff",
+        "Cette ILCP est diversement appelée à Ouakam : - immersion de récifs artificiels-pots (IRA-IPP) 84 - - - - interdiction de la pêche au FMDS interdiction de la PSM inte ificatif sur la nécessité de création d’une nouvelle structure locale de cogestion",
+        "L’existen iative locale de cogestion principale (ILCP) du site, tandis que les réponses « ne sait pas » (NSP) sont les seules notées à Ngor et Yoff",
+        "CONTEXTE DE L’ETUDE Le Projet de Gestion des Ressources Naturelles au Sénégal (SENRM, P1 iative locale de cogestion principale (ILCP) du site, tandis que les réponses « ne sait pas » (NSP) sont les seules notées à Ngor et Yoff",
+        "Cette ILCP est diversement appelée à Ouakam : - immersion de récifs artificiels-pots (IRA-IPP) 84 - - - - interdiction de la pêche au FMDS interdiction de la PSM inte ificatif sur la nécessité de création d’une nouvelle structure locale de cogestion",
+        "L’existenc iative locale de cogestion principale (ILCP) du site, tandis que les réponses « ne sait pas » (NSP) sont les seules notées à Ngor et Yoff"
+      ],
+      "besoins_clean": [
+        "tivité du secteur des pêches et de l’aquaculture » du Projet de Gestion des Ressources Naturelles au Sénégal (SENRM, P175915)",
+        "Une APAC a besoin d'une communauté et d'une zone de ressources bien définies, les deux étant liées par de fortes relations",
+        "Ensuite, la communauté doit avoir le pouvoir de gérer ces ressources et ses décisions de gest",
+        "Le FAF constitue une ressource substantielle pour pérenniser les CLPA",
+        "En effet, bien que des efforts importants aient été réalisés pour mobiliser des ressources additionnelles, les CLPA ont encore besoin d’un appui financier de la part de l’Etat du Sénégal",
+        "L’existence d’une initiative locale de gestion de la pêcherie portée par les CLPA, le niveau d’implication des acteurs et suivant leurs professions ont également une influence sur le besoin de la congestion dans les sites de réplications",
+        "Ensuite, il fallait évaluer (ii) leur pertinence et les modalités pratiques de leur extension dans des commun du CLP et les éléments justifiant la nécessité de la création éventuelle d’une structure de cogestion",
+        "Dans les sites de 31 informations permettront de formuler des consolidations et d’extension, ces recommandations pour une gestion partagée, entre l’état et les acteurs, des pêcheries",
+        "Questionnaire en zone de réplication Il renvoie aux enquêtes effectuées dans les 4 forte de tout cela pourrait mieux faire accepter et appliquer ses décisions, notamment en matière de gestion des ressources halieutiques",
+        "Elles peuvent être résumées comme suit : - Mise en œuvre d’une bonne formation, d’un renforcement des capacités adéquat en GRH, cogestion, g ation complète par les acteurs",
+        "Ces moyens qui sont de nature à consolider ou faciliter l’extension de l’OGLP et/ou de son ILCP ont plusieurs supports possibles, côté Etat : réactivation-promotion de mesures d’accompagnement (formation, appui juridique, AGR, surveillance et recherche participatives, etc",
+        "Sampling Méthodes : Exercices and Solution"
+      ]
+    },
+    "Rufisque": {
+      "nom": "Rufisque",
+      "demographie": {
+        "migrations_presentes": true,
+        "pourcentages_mentionnes": [
+          "58 %",
+          "18 %",
+          "15 %",
+          "90 %",
+          "46 %",
+          "42 %"
+        ]
+      },
+      "engins": [
+        "FD",
+        "FDF",
+        "FMDS",
+        "FME",
+        "PSM",
+        "filet",
+        "pots",
+        "pots à poulpe",
+        "senne",
+        "senne tournante"
+      ],
+      "initiatives_locales_clean": [
+        "ins de pêches, FMF notamment ; - limitation de l'immatriculation des pirogues ; - respect des dimensions des mailles (tout EDP) ; - lutte contre la pollution des sites par les eaux usées dans la mer",
+        "immersion de récifs artificiels (IRA) : vieux bateaux ou véhicules, pots à poulpe, etc",
+        "S’agissant des mesures d'accompagnement nécessaires à une bonne réplication de la cogestion dans un site, plusieurs actions possibles sont énumérées :  formation des membres sur l’OGLP (CLPA ou CLP départemental des pêches",
+        "Ces IGLOC, pour l’essentiel, sont les suivantes : - journée sans pêche (pour éviter la méven on de la ressource ; impact positif sur la biodiversité",
+        ") ; - renforcement des services des pêches (SDP) pour accompagner les CLPA",
+        "S’agissant des mesures d'accompagnement nécessaires à une bonne réplication de la cogestion dans un site, plusieurs actions possibles sont énumérées :  formation des membres sur l’OGLP (CLPA ou CLP, rôle, importance, buts poursuivis",
+        "), la cogestion, la GRH, la gestion des conflits… ;  appui financier-économique : crédits, subventions, dons, prise en charge et fin donc du bénévolat de ILC",
+        "S’agissant des mesures d'accompagnement nécessaires à une bonne réplication de la cogestion dans un site, plusieurs actions possibles sont énumérées :  formation des membres sur l’OGLP (CLPA ou CLP, rôle, importance, buts poursuivis",
+        ") ; - renforcement des services des pêches (SDP) pour accompagner les CLPA",
+        "S’agissant des mesures d'accompagnement nécessaires à une bonne réplication de la cogestion dans un site, plusieurs actions possibles sont énumérées :  formation des membres sur l’OGLP (CLPA ou CLP, rôle, importance, buts poursuivis",
+        "S’agissant des mesures d'accompagnement nécessaires à une bonne réplication de la cogestion dans un site, plusieurs actions possibles sont énumérées :  formation des membres sur l’OGLP (CLPA ou CLP, rôle, importance, buts poursuivis"
+      ],
+      "besoins_clean": [
+        "des ports de pêche traditionnels les plus importants du Sénégal",
+        "La pêche et ses activités annexes constituent la base de l'économie locale, l'agriculture et l'élevage arrivant à peine à subvenir aux besoins propres de la ville",
+        "Soumbédioune Situé sur la des ports de pêche traditionnels les plus importants du Sénégal",
+        "La pêche et ses activités annexes constituent la base de l'économie locale, l'agriculture et l'élevage arrivant à peine à subvenir aux besoins propres de la ville",
+        ") et d’utilisation d’engins de pêche interdits (FMF, senne de pla",
+        "Fief de la confrérie layène par excellence, c’est l'un des ports de pêche traditionnels les plus importants du Sénégal",
+        "La pêche et ses activités annexes constituent la base de l'économie locale, l'agriculture et l'élevage arrivant à peine à subvenir aux besoins propres de la ville",
+        "Le non-partage de sites de pêche s’explique surtout par la méconnaissance et le métier qui ne pousse pas à la mobilité, à l’image de la transformation artisanale",
+        "S’agissant des mesures d'accompagnement nécessaires à une bonne réplication de la cogestion dans un site, plusieurs actions possibles sont énumérées :  formation des membres sur l’OGLP (CLPA ou CLP, rôle, importance, buts poursuivis",
+        "), la cogestion, la GRH, la gestion des conflits… ;  appui financier-économique : crédits, subventions, dons, prise en charge és-félés ») du 1er au 30 septembre de chaque année",
+        "Le débarquement, l’achat, la vente, la transformation et la commercialisation des produits issus de la pêche nocturne à l’aide des embarcations citées sont formellement interdits",
+        "Une telle mesure rentre dans le cadre de la promotion de la cogestion des té de la non-pêche des bateaux dans leurs zones d’évolution traditionnelle, etc"
+      ]
+    },
+    "Thiaroye-sur-mer": {
+      "nom": "Thiaroye-sur-mer",
+      "demographie": {
+        "pourcentages_mentionnes": [
+          "46 %",
+          "42 %",
+          "4 %",
+          "45 %",
+          "2 %",
+          "51 %"
+        ]
+      },
+      "engins": [
+        "senne"
+      ],
+      "initiatives_locales_clean": [
+        ") et d’utilisation d’engins de pêche interdits (FMF, senne de plage, dimensions et maillages non réglementaires, etc",
+        "), baliser au préalable ceux-ci, affecter des personnels administr ites voisins (ex RB) participe de l’équité ; l’extension ouvre un vaste chantier pour un aménagement départemental des pêches",
+        "Les rais es ailleurs (ex : AMP) par les acteurs de certains sites ; certains sites ont des CLPA (ex Ngaparou), d’autres des CLP (Mbour) certaines zones, trop profondes, sont peu propices pour l’implantation d’AMP, par ex",
+        ") et d’utilisation d’engins de pêche interdits (FMF, senne de plage, dimensions et maillages non réglementaires, etc",
+        "), baliser au préalable ceux-ci, affecter des personnels administratifs voisins (ex RB) participe de l’équité ; l’extension ouvre un vaste chantier pour un aménagement départemental des pêches"
+      ],
+      "besoins_clean": [
+        "de spécialistes pour la surveillance, assurer la reconversion des acteurs vers d'autres métiers, améliorer la formation des acteurs, garantir une plus grande équité entre les acteurs ; - promotion de mesures d’accompagnement plus effectives, plus efficientes voire nouvelles",
+        "Relations avec les pêcheurs des site té de la non-pêche des bateaux dans leurs zones d’évolution traditionnelle, etc",
+        "Disposer de spécialistes pour la surveillance, assurer la reconversion des acteurs vers d'autres métiers, améliorer la formation multiforme (sur le Code, la gestion des conflits, la GRH, les aspects juridiques, la recherche de partenaires, l’élaboration de projets, la recherche participative, etc"
+      ]
+    },
+    "Popenguine": {
+      "nom": "Popenguine",
+      "demographie": {
+        "classe_age_modale": "36-45 ans",
+        "migrations_presentes": true,
+        "pourcentages_mentionnes": [
+          "80%",
+          "2%",
+          "8%",
+          "0%",
+          "9%",
+          "7%"
+        ]
+      },
+      "engins": [
+        "FD",
+        "FDF",
+        "FDRR",
+        "FDY",
+        "FMDS",
+        "PSM",
+        "pots",
+        "pots à poulpe",
+        "senne"
+      ],
+      "initiatives_locales_clean": [
+        ";  RB poulpe ;  mise en place et respect des limites de l'AMP, de la ZPP de Ngaparou ;  interdiction de pêcher dans les parcs ;  interdiction de la pêche nocturne de juin à novembre ;  partage des mêmes réunions ;  surveillance participative",
+        ") et d’utilisation d’engins de pêche interdits (FMF, senne de plage, dimensions et maillages non réglementaires, etc",
+        "), baliser au préalable ceux-ci, affecter des personnels administr ites voisins (ex RB) participe de l’équité ; l’extension ouvre un vaste chantier pour un aménagement départemental des pêches",
+        "Déjà en 1946, on y dénombrait une quinzaine de pirogues à rame (2-3 passagers) pour les pêches de proximité et 5 pirogues à voiles (15 m de long, 8 personnes) permettant des campagnes de 3 à 6 mois (Leroux, 1946)",
+        "De nos jours, la pêche devra y faire face à un défi majeur : la cohabitation avec le futur port à conteneurs de Ndayane (1200 ha dont une zone portuaire de 600 ha,",
+        "Hélas, ses plages se réduisent depuis les années 2000 du fait de l'érosion générale et amplifiée du littoral qui revêt un aspect spectaculaire dans certains endroits : Saly Niakh-Niakhal, Obama beach ou Ngaparou",
+        ";  RB poulpe ;  mise en place et respect des limites de l'AMP, de la ZPP de Ngaparou ;  interdiction de pêcher dans les parcs ;  interdiction de la pêche nocturne de juin à novembre ;  partage des mêmes réunions ;  surveillance participative",
+        "Les rais es ailleurs (ex : AMP) par les acteurs de certains sites ; certains sites ont des CLPA (ex Ngaparou), d’autres des CLP (Mbour) certaines zones, trop profondes, sont peu propices pour l’implantation d’AMP, par ex",
+        "5 4,2% 16 13,4% 26 21,8% 24 20,2% 0 0,0% 69 58,0% 1 0,8% 119 - d’interdiction de toute forme de pratique non , 2005)",
+        "La situation de l’espèce est devenue si critique qu’il a fallu lancer une campagne de sensibilisation (« leegi doyna ») pour stopper la pêche des juvéniles, renforcer les dispositions du Code de la pêche maritime portant sa taille minimale marchande à 40 cm",
+        ") et d’utilisation d’engins de pêche interdits (FMF, senne de plage, dimensions et maillages non réglementaires, etc",
+        "), baliser au préalable ceux-ci, affecter des personnels administratifs voisins (ex RB) participe de l’équité ; l’extension ouvre un vaste chantier pour un aménagement départemental des pêches"
+      ],
+      "besoins_clean": [
+        "de spécialistes pour la surveillance, assurer la reconversion des acteurs vers d'autres métiers, améliorer la formation des acteurs, garantir une plus grande équité entre les acteurs ; - promotion de mesures d’accompagnement plus effectives, plus efficientes voire nouvelles",
+        ") et d’utilisation d’engins de pêche interdits (FMF, senne de pla par opportunisme, lui associer l’agriculture ou le transport maritime",
+        "Son économie repose sur la pêche, l'artisanat, le commerce et le tourisme, l'agriculture ne représentant qu'une petite partie des ressources",
+        "Ngaparou dispose d’un CLP comptant environ 600 membres actifs (pêcheurs, mareyeurs, charpentiers et femmes transformatrices) et travaillan etite Côte (74 m) et promontoire dressé entre Popenguine et Guéréo",
+        "À l'origine, les villages de la commune vivaient de l'agriculture et de la pêche",
+        "Relations avec les pêcheurs des site té de la non-pêche des bateaux dans leurs zones d’évolution traditionnelle, etc",
+        "Disposer de spécialistes pour la surveillance, assurer la reconversion des acteurs vers d'autres métiers, améliorer la formation multiforme (sur le Code, la gestion des conflits, la GRH, les aspects juridiques, la recherche de partenaires, l’élaboration de projets, la recherche participative, etc",
+        ";  RB poulpe ;  mise en place et respect des limites de l'AMP, de la e en place et respect des limites de l'AMP, de la ZPP de Ngaparou ;  interdiction de pêcher dans les parcs ;  interdiction de la pêche nocturne de juin à novembre ;  partage des mêmes réunions ;  surveillance participative",
+        "La situation de l’espèce est devenue si critique qu’il a fallu lancer une campagne de sensibilisation (« leegi doyna ») pour stopper la pêche des juvéniles, renforcer les dispositions du Code de la pêche maritime portant sa taille minimale marchande à 40 cm",
+        "Fort de cela, le CLPA de Soumbédioune a mi fférence des pratiques de pêche (entre acteurs de Yoff et de Ngor, par exemple), etc"
+      ]
+    },
+    "Toubab Dialaw": {
+      "nom": "Toubab Dialaw",
+      "demographie": {
+        "pourcentages_mentionnes": [
+          "46 %",
+          "42 %",
+          "4 %",
+          "45 %",
+          "2 %",
+          "51 %"
+        ]
+      },
+      "engins": [
+        "senne"
+      ],
+      "initiatives_locales_clean": [
+        ") et d’utilisation d’engins de pêche interdits (FMF, senne de plage, dimensions et maillages non réglementaires, etc",
+        "), baliser au préalable ceux-ci, affecter des personnels administr ites voisins (ex RB) participe de l’équité ; l’extension ouvre un vaste chantier pour un aménagement départemental des pêches",
+        "Les rais es ailleurs (ex : AMP) par les acteurs de certains sites ; certains sites ont des CLPA (ex Ngaparou), d’autres des CLP (Mbour) certaines zones, trop profondes, sont peu propices pour l’implantation d’AMP, par ex",
+        ") et d’utilisation d’engins de pêche interdits (FMF, senne de plage, dimensions et maillages non réglementaires, etc",
+        "), baliser au préalable ceux-ci, affecter des personnels administratifs voisins (ex RB) participe de l’équité ; l’extension ouvre un vaste chantier pour un aménagement départemental des pêches"
+      ],
+      "besoins_clean": [
+        "de spécialistes pour la surveillance, assurer la reconversion des acteurs vers d'autres métiers, améliorer la formation des acteurs, garantir une plus grande équité entre les acteurs ; - promotion de mesures d’accompagnement plus effectives, plus efficientes voire nouvelles",
+        "Relations avec les pêcheurs des site té de la non-pêche des bateaux dans leurs zones d’évolution traditionnelle, etc",
+        "Disposer de spécialistes pour la surveillance, assurer la reconversion des acteurs vers d'autres métiers, améliorer la formation multiforme (sur le Code, la gestion des conflits, la GRH, les aspects juridiques, la recherche de partenaires, l’élaboration de projets, la recherche participative, etc"
+      ]
+    },
+    "Niangal": {
+      "nom": "Niangal",
+      "demographie": {
+        "pourcentages_mentionnes": [
+          "46 %",
+          "42 %",
+          "4 %",
+          "45 %",
+          "2 %",
+          "51 %"
+        ]
+      },
+      "engins": [
+        "senne"
+      ],
+      "initiatives_locales_clean": [
+        ") et d’utilisation d’engins de pêche interdits (FMF, senne de plage, dimensions et maillages non réglementaires, etc",
+        "), baliser au préalable ceux-ci, affecter des personnels administr ites voisins (ex RB) participe de l’équité ; l’extension ouvre un vaste chantier pour un aménagement départemental des pêches",
+        "Les rais es ailleurs (ex : AMP) par les acteurs de certains sites ; certains sites ont des CLPA (ex Ngaparou), d’autres des CLP (Mbour) certaines zones, trop profondes, sont peu propices pour l’implantation d’AMP, par ex",
+        ") et d’utilisation d’engins de pêche interdits (FMF, senne de plage, dimensions et maillages non réglementaires, etc",
+        "), baliser au préalable ceux-ci, affecter des personnels administratifs voisins (ex RB) participe de l’équité ; l’extension ouvre un vaste chantier pour un aménagement départemental des pêches"
+      ],
+      "besoins_clean": [
+        "de spécialistes pour la surveillance, assurer la reconversion des acteurs vers d'autres métiers, améliorer la formation des acteurs, garantir une plus grande équité entre les acteurs ; - promotion de mesures d’accompagnement plus effectives, plus efficientes voire nouvelles",
+        "Relations avec les pêcheurs des site té de la non-pêche des bateaux dans leurs zones d’évolution traditionnelle, etc",
+        "Disposer de spécialistes pour la surveillance, assurer la reconversion des acteurs vers d'autres métiers, améliorer la formation multiforme (sur le Code, la gestion des conflits, la GRH, les aspects juridiques, la recherche de partenaires, l’élaboration de projets, la recherche participative, etc"
+      ]
+    },
+    "Bargny": {
+      "nom": "Bargny",
+      "demographie": {
+        "migrations_presentes": true,
+        "pourcentages_mentionnes": [
+          "58 %",
+          "18 %",
+          "15 %",
+          "90 %",
+          "46 %",
+          "42 %"
+        ]
+      },
+      "engins": [
+        "FMDS",
+        "FME",
+        "pots",
+        "pots à poulpe",
+        "senne",
+        "senne tournante"
+      ],
+      "initiatives_locales_clean": [
+        "La ZPP de Ngaparou, une des plus célèbres et des plus riches en ressource, suscite la convoitise de pêcheurs fraudeurs des sites environnants (Rufisque, Bargny…)",
+        "Auteurs d’infractions plus ou moins récurre ers…) 89 MACC+ : aspects réglementaires et/ou liés à l’aménagement des pêcheries MACC+ : aspects organisationnels Appliquer des amendes-pénalités en cas de non-respect des espaces maritimes protégés (ZPP, AMP, ZIRA, etc",
+        ") et d’utilisation d’engins de pêche interdits (FMF, senne de plage, dimensions et maillages non réglementaires, etc",
+        "), baliser au préalable ceux-ci, affecter des personnels administr ites voisins (ex RB) participe de l’équité ; l’extension ouvre un vaste chantier pour un aménagement départemental des pêches",
+        "Il y a plus de partage de zones de pêche, d’espaces critiques (frayères, ZPP, AMP…) et de liens de parenté entre acteurs qu’autre chose - il existe bel et bien déjà d’autres ILCP (RB, IRA…) ou les mêmes dans les sites ciblés - des OGLP « interlocutrices » (CLP, CLPA…) existen res",
+        "Pendant 7 mois, les survivants y ont occupé un camp qu’on leur avait aménagé",
+        "La quasi-totalité des plages du littor iculture et de la pêche",
+        "Déjà en 1946, on y dénombrait une quinzaine de pirogues à rame (2-3 passagers) pour les pêches de proximité et 5 pirogues à voiles (15 m de long, 8 personnes) permettant des campagnes de 3 à 6 mois (Leroux, 1946)",
+        "De nos jours, la pêche devra y faire face à un défi majeur : la cohabitation avec le futur port à conteneurs de Ndayane (1200 ha dont une zone portuaire de 600 ha,",
+        "Hélas, ses plages se réduisent depuis les années 2000 du fait de l'érosion générale et amplifiée du littoral qui revêt un aspect spectaculaire dans certains endroits : Saly Niakh-Niakhal, Obama beach ou Ngaparou",
+        "Les rais es ailleurs (ex : AMP) par les acteurs de certains sites ; certains sites ont des CLPA (ex Ngaparou), d’autres des CLP (Mbour) certaines zones, trop profondes, sont peu propices pour l’implantation d’AMP, par ex",
+        "A plus grande échelle, la Fédération Sénégalaise de Pêche Sportive (FSPS) a eu à immerger 150 épaves et 100 carcasses de voitures"
+      ],
+      "besoins_clean": [
+        "de spécialistes pour la surveillance, assurer la reconversion des acteurs vers d'autres métiers, améliorer la formation des acteurs, garantir une plus grande équité entre les acteurs ; - promotion de mesures d’accompagnement plus effectives, plus efficientes voire nouvelles",
+        ") et d’utilisation d’engins de pêche interdits (FMF, senne de pla égion de Thiès 3",
+        "Relations avec les pêcheurs des site és-félés ») du 1er au 30 septembre de chaque année",
+        "Le débarquement, l’achat, la vente, la transformation et la commercialisation des produits issus de la pêche nocturne à l’aide des embarcations citées sont formellement interdits",
+        "Une telle mesure rentre dans le cadre de la promotion de la cogestion des té de la non-pêche des bateaux dans leurs zones d’évolution traditionnelle, etc",
+        "Disposer de spécialistes pour la surveillance, assurer la reconversion des acteurs vers d'autres métiers, améliorer la formation multiforme (sur le Code, la gestion des conflits, la GRH, les aspects juridiques, la recherche de partenaires, l’élaboration de projets, la recherche participative, etc",
+        "Ces ZPP englobent l’ensemble du rivage de chaque village sur une largeur de 2 km pour des raisons de capacités de surveillance",
+        "Elles matérialisent l’espace que la population est ce grandes pirogues pêchant les juvéniles, rassure les pêcheurs artisans sur l’effectivité de la non-pêche des bateaux dans leurs zones d’évolution traditionnelle, etc"
+      ]
+    }
+  }
+}
