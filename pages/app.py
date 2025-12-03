@@ -272,20 +272,23 @@ def format_weather_for_context(weather_data, forecast_data=None):
     tide_data = get_tide_data()
     city_name = weather_data.get('name', 'Dakar')
 
-    if city_name in tide_data:
-        city_tide = tide_data[city_name]
-        context += f"\n\n=== HORAIRES DES MAREES A {city_name.upper()} ===\n"
-        context += f"HEURE ACTUELLE: {city_tide['current_time']}\n\n"
-        context += f"AUJOURD'HUI ({city_tide['today_day']} {city_tide['today_date']}):\n"
-        for tide in city_tide['today']:
-            context += f"Maree {tide['type']}: {tide['time']} ({tide['height']})\n"
+    # Vérifier si la ville existe dans tide_data, sinon utiliser Dakar par défaut
+    if city_name not in tide_data:
+        city_name = 'Dakar'
 
-        context += f"\nDEMAIN ({city_tide['tomorrow_day']} {city_tide['tomorrow_date']}):\n"
-        for tide in city_tide['tomorrow']:
-            context += f"Maree {tide['type']}: {tide['time']} ({tide['height']})\n"
+    city_tide = tide_data[city_name]
+    context += f"\n\n=== HORAIRES DES MAREES A {city_name.upper()} ===\n"
+    context += f"HEURE ACTUELLE: {city_tide.get('current_time', 'N/A')}\n\n"
+    context += f"AUJOURD'HUI ({city_tide.get('today_day', 'N/A')} {city_tide.get('today_date', 'N/A')}):\n"
+    for tide in city_tide.get('today', []):
+        context += f"Maree {tide['type']}: {tide['time']} ({tide['height']})\n"
 
-        context += f"\n*** IMPORTANT: Compare l'heure actuelle ({city_tide['current_time']}) avec les horaires de marée ***\n"
-        context += f"*** Ne recommande QUE les créneaux FUTURS (après {city_tide['current_time']}) ***\n\n"
+    context += f"\nDEMAIN ({city_tide.get('tomorrow_day', 'N/A')} {city_tide.get('tomorrow_date', 'N/A')}):\n"
+    for tide in city_tide.get('tomorrow', []):
+        context += f"Maree {tide['type']}: {tide['time']} ({tide['height']})\n"
+
+    context += f"\n*** IMPORTANT: Compare l'heure actuelle ({city_tide.get('current_time', 'N/A')}) avec les horaires de marée ***\n"
+    context += f"*** Ne recommande QUE les créneaux FUTURS (après {city_tide.get('current_time', 'N/A')}) ***\n\n"
 
         context += "\nREGLES D'OR DE LA PECHE AUX MAREES:\n"
         context += "MEILLEURS MOMENTS (poissons tres actifs):\n"
@@ -715,12 +718,17 @@ if prompt := st.chat_input("Posez votre question..."):
         st.markdown(prompt)
 
     with st.chat_message("assistant"):
-        with st.spinner("🔍 Analyse intelligente..."):
-            response = get_chatbot_response(
-                st.session_state.messages,
-                "",  # Le contexte est maintenant géré dans la fonction
-                prompt
-            )
-            st.markdown(response)
+        with st.spinner("🔍 Analyse intelligente en cours..."):
+            try:
+                response = get_chatbot_response(
+                    st.session_state.messages,
+                    "",  # Le contexte est maintenant géré dans la fonction
+                    prompt
+                )
+                st.markdown(response)
+            except Exception as e:
+                error_message = f"❌ Une erreur s'est produite : {str(e)}\n\nVeuillez réessayer ou reformuler votre question."
+                st.error(error_message)
+                response = error_message
 
     st.session_state.messages.append({"role": "assistant", "content": response})
