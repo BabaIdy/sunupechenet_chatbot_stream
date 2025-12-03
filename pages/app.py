@@ -230,35 +230,62 @@ def format_weather_for_context(weather_data, forecast_data=None):
     if 'clouds' in weather_data:
         context += f"Couverture nuageuse: {weather_data['clouds']['all']}%\n"
 
-    # Prévisions
+    # Prévisions détaillées par jour
     if forecast_data and 'list' in forecast_data:
-        context += "\nPREVISIONS SUR 5 JOURS:\n"
-        for i, forecast in enumerate(forecast_data['list'][:8]):
+        context += "\nPREVISIONS DETAILLEES SUR 5 JOURS:\n"
+        jours_semaine = ["lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi", "dimanche"]
+
+        # Grouper les prévisions par jour
+        previsions_par_jour = {}
+        for forecast in forecast_data['list']:
             dt = datetime.fromtimestamp(forecast['dt'])
-            context += f"\n{dt.strftime('%d/%m a %Hh')}:\n"
-            context += f"   - Temperature: {forecast['main']['temp']}°C\n"
-            context += f"   - Conditions: {forecast['weather'][0]['description']}\n"
-            context += f"   - Vent: {forecast['wind']['speed']} m/s\n"
-            context += f"   - Humidite: {forecast['main']['humidity']}%\n"
+            date_key = dt.strftime('%Y-%m-%d')
+            jour_nom = jours_semaine[dt.weekday()]
+            date_formatee = dt.strftime('%d/%m/%Y')
+
+            if date_key not in previsions_par_jour:
+                previsions_par_jour[date_key] = {
+                    'jour': jour_nom,
+                    'date': date_formatee,
+                    'previsions': []
+                }
+
+            previsions_par_jour[date_key]['previsions'].append({
+                'heure': dt.strftime('%Hh'),
+                'temp': forecast['main']['temp'],
+                'conditions': forecast['weather'][0]['description'],
+                'vent': forecast['wind']['speed'],
+                'humidite': forecast['main']['humidity']
+            })
+
+        # Afficher les prévisions par jour
+        for date_key in sorted(previsions_par_jour.keys())[:5]:
+            jour_info = previsions_par_jour[date_key]
+            context += f"\n{jour_info['jour'].upper()} {jour_info['date']}:\n"
+
+            # Prendre 3-4 moments clés de la journée
+            for prev in jour_info['previsions'][:4]:
+                context += f"   {prev['heure']}: {prev['temp']}°C, {prev['conditions']}, "
+                context += f"vent {prev['vent']} m/s, humidité {prev['humidite']}%\n"
 
     # Ajouter les données de marée
     tide_data = get_tide_data()
     city_name = weather_data.get('name', 'Dakar')
-    current_time = tide_data.get(city_name, {}).get('current_time', datetime.now().strftime("%H:%M"))
 
     if city_name in tide_data:
+        city_tide = tide_data[city_name]
         context += f"\n\n=== HORAIRES DES MAREES A {city_name.upper()} ===\n"
-        context += f"HEURE ACTUELLE: {current_time}\n\n"
-        context += "AUJOURD'HUI:\n"
-        for tide in tide_data[city_name]['today']:
+        context += f"HEURE ACTUELLE: {city_tide['current_time']}\n\n"
+        context += f"AUJOURD'HUI ({city_tide['today_day']} {city_tide['today_date']}):\n"
+        for tide in city_tide['today']:
             context += f"Maree {tide['type']}: {tide['time']} ({tide['height']})\n"
 
-        context += "\nDEMAIN:\n"
-        for tide in tide_data[city_name]['tomorrow']:
+        context += f"\nDEMAIN ({city_tide['tomorrow_day']} {city_tide['tomorrow_date']}):\n"
+        for tide in city_tide['tomorrow']:
             context += f"Maree {tide['type']}: {tide['time']} ({tide['height']})\n"
 
-        context += f"\n*** IMPORTANT: Compare l'heure actuelle ({current_time}) avec les horaires de marée ***\n"
-        context += f"*** Ne recommande QUE les créneaux FUTURS (après {current_time}) ***\n\n"
+        context += f"\n*** IMPORTANT: Compare l'heure actuelle ({city_tide['current_time']}) avec les horaires de marée ***\n"
+        context += f"*** Ne recommande QUE les créneaux FUTURS (après {city_tide['current_time']}) ***\n\n"
 
         context += "\nREGLES D'OR DE LA PECHE AUX MAREES:\n"
         context += "MEILLEURS MOMENTS (poissons tres actifs):\n"
@@ -522,13 +549,56 @@ def get_chatbot_response(messages, base_context, user_question):
     )
     final_context += filtered_context
 
-    current_datetime = datetime.now().strftime("%d/%m/%Y à %H:%M")
+    # Date et heure actuelles avec jour de la semaine
+    now = datetime.now()
+    current_datetime = now.strftime("%d/%m/%Y à %H:%M")
+    jours_semaine = ["lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi", "dimanche"]
+    jour_actuel = jours_semaine[now.weekday()]
+
+    # Calculer les 7 prochains jours avec leurs dates
+    prochains_jours = ""
+    for i in range(7):
+        future_date = now + timedelta(days=i)
+        jour_nom = jours_semaine[future_date.weekday()]
+        if i == 0:
+            prochains_jours += f"- AUJOURD'HUI ({jour_nom}) : {future_date.strftime('%d/%m/%Y')}\n"
+        elif i == 1:
+            prochains_jours += f"- DEMAIN ({jour_nom}) : {future_date.strftime('%d/%m/%Y')}\n"
+        else:
+            prochains_jours += f"- {jour_nom.upper()} : {future_date.strftime('%d/%m/%Y')}\n"
 
     system_message = {
         "role": "system",
         "content": f"""Tu es SunuPecheNet, assistant expert en pêche au Sénégal.
 
-DATE ET HEURE: {current_datetime}
+DATE ET HEURE ACTUELLES: {jour_actuel} {current_datetime}
+
+CALENDRIER DES 7 PROCHAINS JOURS:
+{prochains_jours}
+
+=== INSTRUCTIONS CRITIQUES SUR LES DATES ===
+
+COMPRENDRE LES JOURS:
+- Quand l'utilisateur dit "jeudi", "vendredi", "samedi", etc., tu DOIS:
+  1. Regarder le calendrier ci-dessus
+  2. Identifier la DATE EXACTE correspondante
+  3. Utiliser les prévisions météo disponibles pour CETTE DATE précise
+
+EXEMPLES:
+- Si aujourd'hui = mercredi 03/12/2025:
+  * "jeudi" = 04/12/2025 (demain)
+  * "vendredi" = 05/12/2025 (dans 2 jours)
+  * "samedi" = 06/12/2025 (dans 3 jours)
+  * "dimanche" = 07/12/2025 (dans 4 jours)
+
+- Si l'utilisateur demande "la météo de samedi":
+  1. Tu identifies: samedi = 06/12/2025
+  2. Tu cherches dans les PRÉVISIONS MÉTÉO les données pour le 06/12
+  3. Tu réponds: "Pour samedi 6 décembre 2025, voici les prévisions..."
+
+ERREUR À ÉVITER:
+❌ "Je n'ai pas accès aux prévisions pour ce jour"
+✅ "Pour samedi 6 décembre 2025, selon les prévisions: [données météo]"
 
 === INSTRUCTIONS INTELLIGENCE AUGMENTÉE ===
 
@@ -557,10 +627,16 @@ RÈGLES DE COMBINAISON INTELLIGENTE:
    → Utilise UNIQUEMENT les CSV/PDF/JSON
    → Pas besoin de météo
 
-5. TON STYLE:
+5. QUESTIONS SUR DES JOURS FUTURS (ex: "Météo pour vendredi", "Peut-on pêcher samedi?"):
+   → TOUJOURS convertir le jour en date exacte via le calendrier
+   → Chercher les prévisions pour CETTE DATE dans les données fournies
+   → Répondre avec la date complète: "Pour vendredi 5 décembre 2025..."
+
+6. TON STYLE:
    - Professionnel mais accessible
    - Justifie avec des DONNÉES CHIFFRÉES
-   - Structure claire: Météo → Marées → Stats → Conseil final
+   - Structure claire: Date exacte → Météo → Marées → Conseil final
+   - TOUJOURS préciser la date complète quand tu parles d'un jour futur
    - Si données manquantes, dis-le clairement
 
 {final_context}
