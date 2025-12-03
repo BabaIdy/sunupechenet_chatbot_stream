@@ -42,3 +42,12 @@ rich
 llama-index-core>=0.11.0
 llama-index-llms-openai>=0.3.0
 llama-index-embeddings-openai>=0.2.0
+streamlit
+pandas
+openai
+python-dotenv
+requests
+sounddevice
+soundfile
+gTTS
+llama-index
