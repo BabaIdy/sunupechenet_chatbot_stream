@@ -1,5 +1,5 @@
 # Database
-psycopg[binary]
+psycopg-binary
 psycopg-pool
 
 # HTTP & Networking
@@ -29,16 +29,10 @@ pytz
 tzdata
 
 # Streamlit
-streamlit==1.51
+streamlit>=1.26,<2.0
 
 # Environment
 python-dotenv
-
-# Document Processing
-pypandoc
-markdown-it-py
-langchain-text-splitters
-beautifulsoup4
 
 # Utilities
 aiohttp
@@ -48,11 +42,11 @@ tqdm
 rich
 
 # Llama Index
-llama-index
-llama-index-core
-llama-index-llms-openai
-llama-index-program-openai
-llama-index-question-gen-openai
+llama-index==0.6.15
+llama-index-core==0.6.15
+llama-index-llms-openai==0.6.15
+llama-index-program-openai==0.6.15
+llama-index-question-gen-openai==0.6.15
 
 # Gunicorn pour production
 gunicorn==21.2.0
