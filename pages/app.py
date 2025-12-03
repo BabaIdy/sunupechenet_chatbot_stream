@@ -20,6 +20,7 @@ st.set_page_config(
     layout="wide"
 )
 
+# ======= CHARGER VARIABLES D'ENV =======
 load_dotenv()
 
 # ======= INITIALISATION SESSION =======
@@ -30,8 +31,7 @@ if "all_data" not in st.session_state:
 if "data_loaded" not in st.session_state:
     st.session_state.data_loaded = False
 
-# ======= FONCTIONS UTILES =======
-
+# ======= FONCTIONS DE LECTURE DE FICHIERS =======
 def load_pdf_with_llamaindex(pdf_path):
     try:
         reader = SimpleDirectoryReader(input_files=[pdf_path])
@@ -44,9 +44,9 @@ def load_pdf_with_llamaindex(pdf_path):
 
 def load_csv_with_encoding(file_path):
     encodings = ['utf-8', 'latin-1', 'iso-8859-1', 'cp1252']
-    for encoding in encodings:
+    for enc in encodings:
         try:
-            df = pd.read_csv(file_path, encoding=encoding)
+            df = pd.read_csv(file_path, encoding=enc)
             return df
         except UnicodeDecodeError:
             continue
@@ -68,20 +68,24 @@ def load_all_data():
         st.warning("Dossier data introuvable.")
         return {}
     all_data = {}
+    # CSV
     for file in glob.glob(os.path.join(data_folder, "*.csv")):
         df = load_csv_with_encoding(file)
         if df is not None:
             all_data[os.path.basename(file)] = {"type":"csv", "content":df}
+    # PDF
     for file in glob.glob(os.path.join(data_folder, "*.pdf")):
         text = load_pdf_with_llamaindex(file)
         if text:
             all_data[os.path.basename(file)] = {"type":"pdf","content":text}
+    # JSON
     for file in glob.glob(os.path.join(data_folder, "*.json")):
         with open(file, "r", encoding="utf-8") as f:
             json_data = json.load(f)
             all_data[os.path.basename(file)] = {"type":"json","content":json_data}
     return all_data
 
+# ======= FONCTIONS AUDIO =======
 def record_audio(duration=5, fs=16000):
     st.info(f"Enregistrement {duration}s...")
     recording = sd.rec(int(duration*fs), samplerate=fs, channels=1, dtype='int16')
@@ -103,6 +107,7 @@ def speak_text(text, lang="fr"):
     audio_bytes = open(tmp_file.name,"rb").read()
     st.audio(audio_bytes, format="audio/mp3")
 
+# ======= FONCTIONS METEO ET MAREES =======
 def get_weather_data(city="Dakar"):
     api_key = os.getenv("OWM_API_KEY")
     if not api_key:
@@ -117,7 +122,47 @@ def get_weather_data(city="Dakar"):
     except:
         return None
 
-def format_context(data_dict):
+def get_forecast_data(city="Dakar"):
+    api_key = os.getenv("OWM_API_KEY")
+    if not api_key:
+        return None
+    try:
+        resp = requests.get(
+            "http://api.openweathermap.org/data/2.5/forecast",
+            params={"q":city, "appid":api_key, "units":"metric", "lang":"fr"},
+            timeout=10
+        )
+        return resp.json()
+    except:
+        return None
+
+def get_tide_data():
+    current_time = datetime.now().strftime("%H:%M")
+    tide_data = {
+        "Dakar": {
+            "current_time": current_time,
+            "today": [
+                {"type": "haute", "time": "05:30", "height": "1.2m"},
+                {"type": "basse", "time": "11:45", "height": "0.3m"},
+                {"type": "haute", "time": "17:50", "height": "1.3m"},
+                {"type": "basse", "time": "23:55", "height": "0.2m"}
+            ]
+        }
+    }
+    return tide_data
+
+def format_weather_for_context(weather_data, forecast_data=None):
+    if not weather_data:
+        return ""
+    context = f"Lieu: {weather_data.get('name','N/A')}, Temp: {weather_data['main']['temp']}°C, Conditions: {weather_data['weather'][0]['description']}\n"
+    tide_data = get_tide_data()
+    city = weather_data.get('name','Dakar')
+    if city in tide_data:
+        context += f"Maree actuelle: {tide_data[city]['current_time']}\n"
+    return context
+
+# ======= CONTEXTE CHAT =======
+def create_context_from_data(data_dict):
     context = ""
     for fname, info in data_dict.items():
         context += f"\n=== {fname} ===\n"
@@ -130,13 +175,29 @@ def format_context(data_dict):
             context += json.dumps(info["content"], indent=2)[:500]+"...\n"
     return context
 
-def get_chatbot_response(messages, user_question):
+def get_chatbot_response(messages, user_question, city="Dakar"):
     client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
-    context = format_context(st.session_state.all_data)
+
+    weather_data = get_weather_data(city)
+    forecast_data = get_forecast_data(city)
+    weather_context = format_weather_for_context(weather_data, forecast_data)
+    local_context = create_context_from_data(st.session_state.all_data)
+
     system_message = {
         "role":"system",
-        "content": f"Tu es SunuPecheNet. Contexte:\n{context}"
+        "content": f"""
+Tu es SunuPecheNet, assistant expert en pêche au Sénégal.
+Réponds aux questions de manière claire et précise sur :
+- Zones poissonneuses
+- Espèces de poissons
+- Conditions météo et marées
+- Réglementations locales
+
+Contexte météo / marées: {weather_context}
+Contexte données locales: {local_context}
+"""
     }
+
     try:
         resp = client.chat.completions.create(
             model="gpt-4o-mini",
@@ -160,15 +221,12 @@ if not st.session_state.data_loaded:
     st.session_state.all_data = load_all_data()
     st.session_state.data_loaded = True
 
-# ======= CHAT =======
+# ======= CHAT TEXTE =======
 st.title("SunuPecheNet - Chat intelligent")
-
-# Affichage messages
 for msg in st.session_state.messages:
     with st.chat_message(msg["role"]):
         st.markdown(msg["content"])
 
-# Input texte
 if prompt := st.chat_input("Posez votre question..."):
     st.session_state.messages.append({"role":"user","content":prompt})
     with st.chat_message("user"):
@@ -179,7 +237,7 @@ if prompt := st.chat_input("Posez votre question..."):
             st.markdown(response)
     st.session_state.messages.append({"role":"assistant","content":response})
 
-# ======= AUDIO =======
+# ======= CHAT AUDIO =======
 st.divider()
 st.subheader("🎤 Posez votre question par la voix")
 duration = st.number_input("Durée en secondes", min_value=3, max_value=20, value=5)
@@ -188,12 +246,15 @@ if st.button("Enregistrer & poser la question"):
     try:
         question_audio = transcribe_audio(audio_file)
         st.markdown(f"**Vous avez dit :** {question_audio}")
-        st.session_state.messages.append({"role":"user","content":question_audio})
-        with st.chat_message("assistant"):
-            with st.spinner("Analyse..."):
-                response = get_chatbot_response(st.session_state.messages, question_audio)
-                st.markdown(response)
-                speak_text(response)
-        st.session_state.messages.append({"role":"assistant","content":response})
+        if question_audio.strip() != "":
+            st.session_state.messages.append({"role":"user","content":question_audio})
+            with st.chat_message("assistant"):
+                with st.spinner("Analyse..."):
+                    response = get_chatbot_response(st.session_state.messages, question_audio)
+                    st.markdown(response)
+                    speak_text(response)
+            st.session_state.messages.append({"role":"assistant","content":response})
+        else:
+            st.warning("La transcription est vide, veuillez réessayer.")
     except Exception as e:
         st.error(f"Erreur transcription audio: {e}")
