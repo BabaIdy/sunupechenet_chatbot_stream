@@ -192,18 +192,18 @@ def get_tide_data():
             ]
         },
         "Kaolack": {
-                    "current_time": current_time,
-                    "today": [
-                        {"type": "haute", "time": "05:50", "height": "1.1m"},
-                        {"type": "basse", "time": "12:05", "height": "0.4m"},
-                        {"type": "haute", "time": "18:10", "height": "1.2m"}
-                    ],
-                    "tomorrow": [
-                        {"type": "haute", "time": "06:35", "height": "1.2m"},
-                        {"type": "basse", "time": "12:50", "height": "0.3m"},
-                        {"type": "haute", "time": "18:55", "height": "1.3m"}
-                    ]
-                }
+            "current_time": current_time,
+            "today": [
+                {"type": "haute", "time": "05:50", "height": "1.1m"},
+                {"type": "basse", "time": "12:05", "height": "0.4m"},
+                {"type": "haute", "time": "18:10", "height": "1.2m"}
+            ],
+            "tomorrow": [
+                {"type": "haute", "time": "06:35", "height": "1.2m"},
+                {"type": "basse", "time": "12:50", "height": "0.3m"},
+                {"type": "haute", "time": "18:55", "height": "1.3m"}
+            ]
+        }
     }
     return tide_data
 
@@ -388,9 +388,10 @@ def load_all_data():
     """
     Charge tous les fichiers CSV, PDF et JSON du dossier data
     """
+    # CORRECTION: __file__ au lieu de _file_
     possible_paths = [
-        os.path.join(os.path.dirname(_file_), '..', 'data'),
-        os.path.join(os.path.dirname(_file_), 'data'),
+        os.path.join(os.path.dirname(__file__), '..', 'data'),
+        os.path.join(os.path.dirname(__file__), 'data'),
         'data',
         '../data'
     ]
@@ -638,7 +639,7 @@ if prompt := st.chat_input("Posez votre question..."):
         st.markdown(prompt)
 
     with st.chat_message("assistant"):
-        with st.spinner(" Analyse intelligente..."):
+        with st.spinner("🔍 Analyse intelligente..."):
             response = get_chatbot_response(
                 st.session_state.messages,
                 "",  # Le contexte est maintenant géré dans la fonction
